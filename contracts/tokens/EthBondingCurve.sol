@@ -52,7 +52,7 @@ contract EthBondingCurve is StandardToken, BancorFormula, Ownable {
     totalSupply_ = totalSupply_.add(tokensToMint);
     balances[msg.sender] = balances[msg.sender].add(tokensToMint);
     poolBalance = poolBalance.add(msg.value);
-    LogMint(tokensToMint, msg.value);
+    emit LogMint(tokensToMint, msg.value);
     return true;
   }
 
@@ -69,7 +69,7 @@ contract EthBondingCurve is StandardToken, BancorFormula, Ownable {
     poolBalance = poolBalance.sub(ethAmount);
     balances[msg.sender] = balances[msg.sender].sub(sellAmount);
     totalSupply_ = totalSupply_.sub(sellAmount);
-    LogWithdraw(sellAmount, ethAmount);
+    emit LogWithdraw(sellAmount, ethAmount);
     return true;
   }
 

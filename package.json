@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "zos-lib": "^1.4.1"
+  }
+}
