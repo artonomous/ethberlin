@@ -9,10 +9,24 @@
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.title {
+  font-size: 4em;
+  font-weight: 300;
+  letter-spacing: 4px;
 }
 
-.App-intro {
-  font-size: large;
+.intro {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thinglist {
+  display: flex;
+}
+
+.thinglist li {
+  list-style: none;
+  flex-grow: 1;
 }
