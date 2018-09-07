@@ -1,0 +1,12 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: .
+    expose:
+      - 4000
+    ports:
+      - 4000:3000
+    volumes:
+      - ./src:/usr/src/app/src
+      - ./public:/usr/src/app/public
