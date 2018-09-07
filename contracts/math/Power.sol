@@ -1,6 +1,5 @@
 pragma solidity ^0.4.18;
 
-
 /**
  * bancor formula by bancor
  * https://github.com/bancorprotocol/contracts

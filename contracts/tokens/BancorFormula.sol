@@ -1,7 +1,7 @@
 pragma solidity ^0.4.18;
 
 import "../math/Power.sol";
-import "zeppelin-solidity/contracts/math/SafeMath.sol";
+import "openzeppelin-solidity/contracts/math/SafeMath.sol";
 
 /**
  * Bancor formula by Bancor
