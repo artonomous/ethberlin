@@ -42,6 +42,17 @@ function draw() {
       });
     });
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    try {
+          eval(this.state.code); 
+    } catch (e) {
+      if (e instanceof SyntaxError) {
+        //noop
+      }
+    }
+  }
+
   render() {
     const options = {
       selectOnLineNumbers: true
@@ -82,7 +93,11 @@ function draw() {
             }}
             className="preview"
           >
-            <h2>canvas here</h2>
+            <canvas 
+              className="canvas"
+              width={(window.screen.width/2) - 50}
+              height={window.screen.height - 300}>
+            </canvas>
           </div>
         </div>
       </div>
