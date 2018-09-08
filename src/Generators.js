@@ -60,7 +60,7 @@ class Generators extends React.Component {
             onRequestClose={this.handleModalClose(id)}
             style={customStyles}
           >
-            <BondingModal generator={creator} />
+            <BondingModal generator={id} />
           </ReactModal>
         </div>
       </div>

@@ -5,13 +5,15 @@ import { reducer as ArtonomousReducer } from "../contracts/Artonomous";
 import { reducer as SoulTokenReducer } from "../contracts/SoulToken";
 import { reducer as AuctionHouseReducer } from "../contracts/AuctionHouse";
 import { reducer as GeneratorRegistryReducer } from "../contracts/GeneratorRegistry";
+import { reducer as ArtPieceTokenReducer} from "../contracts/ArtPieceToken";
 
 const reducers = combineReducers({
   ...web3Reducers,
   ...ArtonomousReducer,
   ...SoulTokenReducer,
   ...AuctionHouseReducer,
-  ...GeneratorRegistryReducer
+  ...GeneratorRegistryReducer,
+  ...ArtPieceTokenReducer
 });
 
 export default reducers;

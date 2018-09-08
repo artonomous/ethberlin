@@ -15,8 +15,9 @@ import CreateGenerator from "./CreateGenerator";
 import AboutContent from "./components/AboutContent";
 import Generators from "./Generators";
 import HomeContainer from "./containers/HomeContainer";
+import HistoricalPieces from "./components/HistoricalPieces";
 
-import withLoading from "./utils/withLoading";
+import withMainLoading from "./utils/withMainLoading";
 
 class App extends Component {
   render() {
@@ -33,7 +34,9 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={() => <HomeContainer auctionHouse={auctionHouse} />}
+          render={() => <HomeContainer
+                          artPieceToken={artPieceToken}
+                          auctionHouse={auctionHouse} />}
         />
         <Route
           exact
@@ -43,6 +46,11 @@ class App extends Component {
         />
         <Route exact path="/generators/create" component={CreateGenerator} />
         <Route exact path="/about" component={AboutContent} />
+        <Route
+          exact
+          path="/historical"
+          component={HistoricalPieces}
+        />
         <Footer />
       </div>
     );
@@ -73,7 +81,7 @@ export default compose(
       this.props.getArtonomous();
     }
   }),
-  withLoading(({ accounts, artonomousInfo }) => {
+  withMainLoading(({ accounts, artonomousInfo }) => {
     return !accounts || !accounts.get("items") || !artonomousInfo.get("value");
   })
 )(App);
