@@ -1,5 +1,5 @@
 body {
-  font-family: 'Slabo 27px', serif;
+  font-family: "Slabo 27px", serif;
   display: flex;
   flex-direction: column;
 }
@@ -26,6 +26,8 @@ body {
 
 .art-root {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 3em;
 }
 
@@ -39,24 +41,32 @@ body {
 }
 
 .art-info {
+  display: flex;
   flex: 1;
   text-align: left;
-  border: 1px solid black;
-  margin-left: 3em;
-  background-color: #FAFAFA;
-  box-shadow: 1px 3px 0px 0px rgba(0,0,0,0.75); 
+  margin-top: 30px;
+  width: 65%;
 }
 
-.art-info .price, .art-info .timeleft, .art-info .generator {
+.art-info .price,
+.art-info .timeleft,
+.art-info .generator {
   font-size: 2em;
   font-weight: bolder;
-  margin-left: 1em;
-  width: 83%;
 }
 
-.art-info .price::before, .art-info .timeleft::before, .art-info .generator::before {
+.art-info .timeleft {
+  flex: 1;
+  margin: 0 12%;
+}
+
+.art-info .price::before,
+.art-info .timeleft::before,
+.art-info .generator::before {
+  margin-bottom: 4px;
+  padding-bottom: 4px;
   font-size: 0.5em;
-  display:block;
+  display: block;
   border-bottom: 1px dotted black;
 }
 
@@ -83,7 +93,7 @@ body {
   margin-top: 1em;
   border: none;
   outline: none;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .bid-button {
@@ -93,7 +103,7 @@ body {
   text-align: center;
 }
 
-.historical-pieces { 
+.historical-pieces {
   display: flex;
   margin-top: 2em;
   text-align: center;
@@ -104,14 +114,24 @@ body {
   display: inline-block;
 }
 
-.box1, .box2, .box3 { min-width: 0 } /* See http://stackoverflow.com/q/26895349/ */
-.box1 { flex: 0 30%;} /* Initial width of 200, won't grow, can shrink if necessary */
-.box2 { flex: 30% } /* Initial width of 400, grows to fill available space, can shrink if necessary */
-.box3 { flex: 0 30% } /* Initial width of 400, won't grow, can shrink if necessary */
+.box1,
+.box2,
+.box3 {
+  min-width: 0;
+} /* See http://stackoverflow.com/q/26895349/ */
+.box1 {
+  flex: 0 30%;
+} /* Initial width of 200, won't grow, can shrink if necessary */
+.box2 {
+  flex: 30%;
+} /* Initial width of 400, grows to fill available space, can shrink if necessary */
+.box3 {
+  flex: 0 30%;
+} /* Initial width of 400, won't grow, can shrink if necessary */
 
 .historical-info-wrapper {
-  background-color: #FAFAFA;
-  box-shadow: 1px 3px 0px 0px rgba(0,0,0,0.75); 
+  background-color: #fafafa;
+  box-shadow: 1px 3px 0px 0px rgba(0, 0, 0, 0.75);
   border: 1px solid black;
   display: inline-block;
 }
@@ -131,7 +151,8 @@ body {
   margin-left: 2em;
 }
 
-.historical-info p.sold-for::before, .historical-info p.generator::before {
+.historical-info p.sold-for::before,
+.historical-info p.generator::before {
   display: block;
   border-bottom: 1px dashed black;
   width: 80%;
@@ -147,7 +168,7 @@ body {
   content: "Generator";
 }
 
-.color-text{
+.color-text {
   color: white;
 }
 
