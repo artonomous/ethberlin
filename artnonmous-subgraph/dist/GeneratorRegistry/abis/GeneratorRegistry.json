@@ -43,16 +43,21 @@
     "inputs": [
       {
         "indexed": true,
+        "name": "context",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
         "name": "registryEntry",
         "type": "address"
       },
       {
-        "indexed": true,
+        "indexed": false,
         "name": "eventType",
         "type": "bytes32"
       }
     ],
-    "name": "RegistryEntryEvent",
+    "name": "RegistryEntryEVT",
     "type": "event"
   },
   {

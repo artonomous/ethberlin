@@ -5,6 +5,10 @@ services:
     volumes:
       - "./data/ipfs_staging:/export"
       - "./data/ipfs:/data/ipfs"
+    ports:
+      - 4001:4001
+      - 5001:5001
+      - 8080:8080
     networks:
       app_net:
         ipv4_address: 172.18.18.10

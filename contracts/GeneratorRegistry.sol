@@ -6,7 +6,8 @@ import "./GeneratorFactory.sol";
 import "./Generator.sol";
 
 contract GeneratorRegistry {
-  event RegistryEntryEvent(address indexed registryEntry, bytes32 indexed eventType);
+  // event RegistryEntryEV(address indexed registryEntry, bytes32 indexed eventType);
+  event RegistryEntryEVT(bytes32 indexed context, address registryEntry, bytes32 eventType);
 
   GeneratorFactory public factory;
   StandardToken public token;
@@ -31,7 +32,7 @@ contract GeneratorRegistry {
   }
 
   function fireRegistryEvent(bytes32 _eventType) public {
-    emit RegistryEntryEvent(msg.sender, _eventType);
+    emit RegistryEntryEVT("ArtGenerator", msg.sender, _eventType);
   }
 
   function getToken() public view returns (address) {

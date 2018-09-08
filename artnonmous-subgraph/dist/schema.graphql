@@ -4,5 +4,4 @@ type Generator @entity {
     name: String
     creator: String
     sourceUri: String
-    token: String
 }

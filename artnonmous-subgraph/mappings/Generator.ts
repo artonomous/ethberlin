@@ -1,5 +1,5 @@
 
-export function handleRegistryEntryEvent(event: RegistryEntryEvent): void {
+export function handleRegistryEntryEVT(event: RegistryEntryEVT): void {
     let registryEntryAddress = event.params.registryEntry;
     let eventType = event.params.eventType.toString();
 
@@ -10,10 +10,9 @@ export function handleRegistryEntryEvent(event: RegistryEntryEvent): void {
     if (eventType == 'constructed') {
         let entity = new Entity();
         entity.setString('id', registryEntryAddress.toHex());
-        entity.setString('name', entryData.value0);
-        entity.setString('creator', entryData.value1.toHex());
         entity.setString('sourceUri', entryData.value2);
-        entity.setString('token', entryData.value3.toHex());
+        entity.setString('name', entryData.name)
+        entity.setString('creator', entryData.creator);
         store.set('Generator', registryEntryAddress.toHex(), entity);
     }
 }
