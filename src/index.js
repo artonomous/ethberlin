@@ -20,7 +20,7 @@ const store = createStore(history);
 ReactDOM.render(
   <ReduxProvider store={store}>
     <ConnectedRouter history={history}>
-      <div>
+      <div className="wrapper">
         <Header />
         <Route exact path="/" component={App} />
         <Route exact path="/generators" component={Generators} />

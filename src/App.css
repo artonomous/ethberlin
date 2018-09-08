@@ -1,9 +1,16 @@
 body {
   font-family: 'Slabo 27px', serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .root {
   text-align: center;
+}
+
+.wrapper {
+  flex: 1;
 }
 
 .horizontal {
