@@ -77,5 +77,35 @@
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "creator",
+        "type": "address"
+      }
+    ],
+    "name": "Constructed",
+    "type": "event"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "startAuction",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "buyPiece",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
   }
 ]

@@ -1,6 +1,3 @@
 [submodule "graph-node"]
 	path = graph-node
-	url = https://github.com/graphprotocol/graph-node.git
-[submodule "adchain-subgraph"]
-	path = adchain-subgraph
-	url = https://github.com/graphprotocol/adchain-subgraph
+	url = https://github.com/graphprotocol/graph-node.git#ethberlin

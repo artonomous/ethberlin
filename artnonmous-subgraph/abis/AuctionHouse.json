@@ -2,20 +2,6 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "pieceToken",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
     "name": "AUCTION_LENGTH",
     "outputs": [
       {
@@ -25,6 +11,15 @@
     ],
     "payable": false,
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -50,15 +45,32 @@
     "type": "function"
   },
   {
-    "inputs": [
+    "constant": true,
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
       {
-        "name": "_pieceToken",
+        "name": "",
         "type": "address"
       }
     ],
     "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "payable": false,
     "stateMutability": "nonpayable",
-    "type": "constructor"
+    "type": "function"
   },
   {
     "anonymous": false,
@@ -86,11 +98,6 @@
     "anonymous": false,
     "inputs": [
       {
-        "indexed": true,
-        "name": "buyer",
-        "type": "address"
-      },
-      {
         "indexed": false,
         "name": "tokenId",
         "type": "uint256"
@@ -99,23 +106,62 @@
         "indexed": false,
         "name": "price",
         "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "endTime",
+        "type": "uint256"
       }
     ],
-    "name": "Sold",
+    "name": "Ended",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "previousOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipRenounced",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
     "type": "event"
   },
   {
     "constant": false,
     "inputs": [],
-    "name": "buy",
+    "name": "end",
     "outputs": [],
-    "payable": true,
-    "stateMutability": "payable",
+    "payable": false,
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
     "constant": false,
-    "inputs": [],
+    "inputs": [
+      {
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
     "name": "start",
     "outputs": [],
     "payable": false,

@@ -5,12 +5,7 @@
     "scripts": {
       "codegen": "graph codegen subgraph.yaml",
       "build": "graph build subgraph.yaml",
-      "build-ipfs": "graph build --ipfs /ip4/127.0.0.1/tcp/5001 subgraph.yaml",
-      "testnet": "ganache-cli -p 8546 --db ganache-db"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/graphprotocol/memefactory.git"
+      "build-ipfs": "graph build --ipfs /ip4/127.0.0.1/tcp/5001 subgraph.yaml"
     },
     "author": "Artnonmous",
     "license": "UNLICENSED",
@@ -19,4 +14,3 @@
       "graph-cli": "ssh://git@github.com:graphprotocol/graph-cli.git"
     }
   }
-  

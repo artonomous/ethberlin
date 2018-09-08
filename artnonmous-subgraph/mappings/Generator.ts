@@ -1,14 +1,13 @@
 
-
-export function handleGeneratorRegistryEvent(event: RegistryEntryEvent): void {
+export function handleRegistryEntryEvent(event: RegistryEntryEvent): void {
     let registryEntryAddress = event.params.registryEntry;
     let eventType = event.params.eventType.toString();
 
     let generatorContract = Generator.bind(registryEntryAddress, event.blockHash);
 
     let entryData = generatorContract.getGenerator();
-    
-    if (eventType === 'constructed') {
+
+    if (eventType == 'constructed') {
         let entity = new Entity();
         entity.setString('id', registryEntryAddress.toHex());
         entity.setString('name', entryData.value0);

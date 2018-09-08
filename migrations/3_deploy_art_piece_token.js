@@ -1,5 +1,5 @@
 var ArtPieceToken = artifacts.require("./ArtPieceToken.sol");
 
-module.exports = function(deployer) {
-  deployer.deploy(ArtPieceToken, "ArtPieceToken", "ART");
+module.exports = async function(deployer) {
+  await deployer.deploy(ArtPieceToken, "ArtPieceToken", "ART");
 };

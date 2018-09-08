@@ -14,7 +14,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "bootstrap": "truffle exec bootstrap/bootstrap.js"
+    "deploy-dev": "truffle migrate --reset && node ./genAbi.js && yarn bootstrap-dev",
+    "bootstrap-dev": "truffle exec bootstrap/bootstrap.js"
   },
   "devDependencies": {
     "graph-cli": "ssh://git@github.com:graphprotocol/graph-cli.git",

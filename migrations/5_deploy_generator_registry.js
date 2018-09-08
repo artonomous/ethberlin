@@ -2,6 +2,8 @@ const GeneratorRegistry = artifacts.require("./GeneratorRegistry.sol");
 const SoulToken = artifacts.require("./SoulToken.sol");
 
 module.exports = async function(deployer) {
-  const soulToken = await SoulToken.deployed();
-  deployer.deploy(GeneratorRegistry, soulToken.address);
+  return deployer.then(async () => {
+    const soulToken = await SoulToken.deployed();
+    await deployer.deploy(GeneratorRegistry, soulToken.address);
+  });
 };

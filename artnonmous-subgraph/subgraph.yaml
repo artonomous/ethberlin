@@ -3,28 +3,25 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: Artonomous
+    name: GeneratorRegistry
     source:
-      abi: Artonomous
-      address: '06012c8cf97BEaD5deAe237070F9587f8E7A266d'
+      abi: GeneratorRegistry
+      address: 'fb88de099e13c3ed21f80a7a1e49f8caecf10df6'
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.1
       language: wasm/assemblyscript
       entities:
-        - ArtPieceToken
-        - GeneratorRegistry
         - Generator
+        - GeneratorToken
       abis:
-        - name: Artonomous
-          file: ./abis/Artonomous.json
-        - name: ArtPieceToken
-          file: ./abis/ArtPieceToken.json
         - name: GeneratorRegistry
           file: ./abis/GeneratorRegistry.json
+        - name: GeneratorToken
+          file: ./abis/GeneratorToken.json
         - name: Generator
           file: ./abis/Generator.json
       eventHandlers:
-        - event: GeneratorRegistryEvent(address,bytes32)
-          handler: handleGeneratorRegistryEvent
-      file: ./mappings/Artnonmous.ts
+        - event: RegistryEntryEvent(address,bytes32)
+          handler: handleRegistryEntryEvent
+      file: ./mappings/Generator.ts

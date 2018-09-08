@@ -1,25 +1,6 @@
 [
   {
     "constant": true,
-    "inputs": [
-      {
-        "name": "_interfaceId",
-        "type": "bytes4"
-      }
-    ],
-    "name": "supportsInterface",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
     "inputs": [],
     "name": "name",
     "outputs": [
@@ -77,20 +58,6 @@
       {
         "name": "",
         "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "InterfaceId_ERC165",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bytes4"
       }
     ],
     "payable": false,
@@ -435,7 +402,7 @@
         "type": "address"
       },
       {
-        "indexed": true,
+        "indexed": false,
         "name": "_tokenId",
         "type": "uint256"
       }
@@ -457,7 +424,7 @@
         "type": "address"
       },
       {
-        "indexed": true,
+        "indexed": false,
         "name": "_tokenId",
         "type": "uint256"
       }
@@ -495,8 +462,12 @@
         "type": "address"
       },
       {
-        "name": "_tokenURI",
-        "type": "string"
+        "name": "_tokenId",
+        "type": "uint256"
+      },
+      {
+        "name": "_generator",
+        "type": "address"
       }
     ],
     "name": "mint",
@@ -508,6 +479,25 @@
     ],
     "payable": false,
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getGenerator",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
     "type": "function"
   }
 ]
