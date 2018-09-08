@@ -1,0 +1,22 @@
+{
+    "name": "artnonmous-subgraph",
+    "version": "0.0.1",
+    "description": "Artnonmous subgraph for The Graph",
+    "scripts": {
+      "codegen": "graph codegen subgraph.yaml",
+      "build": "graph build subgraph.yaml",
+      "build-ipfs": "graph build --ipfs /ip4/127.0.0.1/tcp/5001 subgraph.yaml",
+      "testnet": "ganache-cli -p 8546 --db ganache-db"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/graphprotocol/memefactory.git"
+    },
+    "author": "Artnonmous",
+    "license": "UNLICENSED",
+    "devDependencies": {
+      "ganache-cli": "^6.1.7",
+      "graph-cli": "ssh://git@github.com:graphprotocol/graph-cli.git"
+    }
+  }
+  

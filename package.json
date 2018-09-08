@@ -16,6 +16,8 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "graph-cli": "ssh://git@github.com:graphprotocol/graph-cli.git",
+    "openzeppelin-solidity": "1.12.0",
     "prettier": "1.14.2"
   }
 }

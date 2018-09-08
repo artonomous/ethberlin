@@ -1,0 +1,8 @@
+type Generator @entity {
+    id: ID!
+
+    name: String
+    creator: String
+    sourceUri: String
+    token: String
+}
