@@ -171,7 +171,7 @@
         "id": 372,
         "nodeType": "ImportDirective",
         "scope": 456,
-        "sourceUnit": 4642,
+        "sourceUnit": 4694,
         "src": "26:56:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -182,7 +182,7 @@
         "id": 373,
         "nodeType": "ImportDirective",
         "scope": 456,
-        "sourceUnit": 2558,
+        "sourceUnit": 2568,
         "src": "84:37:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -207,10 +207,10 @@
               "id": 375,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4641,
+              "referencedDeclaration": 4693,
               "src": "179:13:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$4641",
+                "typeIdentifier": "t_contract$_Initializable_$4693",
                 "typeString": "contract Initializable"
               }
             },
@@ -220,8 +220,8 @@
           }
         ],
         "contractDependencies": [
-          2557,
-          4641
+          2567,
+          4693
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -229,7 +229,7 @@
         "id": 455,
         "linearizedBaseContracts": [
           455,
-          4641
+          4693
         ],
         "name": "Generator",
         "nodeType": "ContractDefinition",
@@ -350,7 +350,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+              "typeIdentifier": "t_contract$_GeneratorToken_$2567",
               "typeString": "contract GeneratorToken"
             },
             "typeName": {
@@ -358,10 +358,10 @@
               "id": 385,
               "name": "GeneratorToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2557,
+              "referencedDeclaration": 2567,
               "src": "309:14:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                 "typeString": "contract GeneratorToken"
               }
             },
@@ -575,7 +575,7 @@
                       "referencedDeclaration": 386,
                       "src": "585:5:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                        "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                         "typeString": "contract GeneratorToken"
                       }
                     },
@@ -751,7 +751,7 @@
                         "nodeType": "NewExpression",
                         "src": "593:18:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint8_$_t_address_$_t_uint32_$_t_uint256_$returns$_t_contract$_GeneratorToken_$2557_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint8_$_t_address_$_t_uint32_$_t_uint256_$returns$_t_contract$_GeneratorToken_$2567_$",
                           "typeString": "function (string memory,string memory,uint8,address,uint32,uint256) returns (contract GeneratorToken)"
                         },
                         "typeName": {
@@ -759,10 +759,10 @@
                           "id": 416,
                           "name": "GeneratorToken",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2557,
+                          "referencedDeclaration": 2567,
                           "src": "597:14:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                            "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                             "typeString": "contract GeneratorToken"
                           }
                         }
@@ -777,13 +777,13 @@
                       "nodeType": "FunctionCall",
                       "src": "593:74:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                        "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                         "typeString": "contract GeneratorToken"
                       }
                     },
                     "src": "585:82:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                      "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                       "typeString": "contract GeneratorToken"
                     }
                   },
@@ -883,7 +883,7 @@
                   "name": "isInitializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4640,
+                  "referencedDeclaration": 4692,
                   "src": "461:13:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1080,7 +1080,7 @@
                         "referencedDeclaration": 386,
                         "src": "867:5:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                          "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                           "typeString": "contract GeneratorToken"
                         }
                       }
@@ -1094,7 +1094,7 @@
                     "nodeType": "TupleExpression",
                     "src": "815:63:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_address_$_t_string_storage_$_t_contract$_GeneratorToken_$2557_$",
+                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_address_$_t_string_storage_$_t_contract$_GeneratorToken_$2567_$",
                       "typeString": "tuple(string storage ref,address,string storage ref,contract GeneratorToken)"
                     }
                   },
@@ -1271,7 +1271,7 @@
         "id": 372,
         "nodeType": "ImportDirective",
         "scope": 456,
-        "sourceUnit": 4642,
+        "sourceUnit": 4694,
         "src": "26:56:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1282,7 +1282,7 @@
         "id": 373,
         "nodeType": "ImportDirective",
         "scope": 456,
-        "sourceUnit": 2558,
+        "sourceUnit": 2568,
         "src": "84:37:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1307,10 +1307,10 @@
               "id": 375,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4641,
+              "referencedDeclaration": 4693,
               "src": "179:13:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$4641",
+                "typeIdentifier": "t_contract$_Initializable_$4693",
                 "typeString": "contract Initializable"
               }
             },
@@ -1320,8 +1320,8 @@
           }
         ],
         "contractDependencies": [
-          2557,
-          4641
+          2567,
+          4693
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -1329,7 +1329,7 @@
         "id": 455,
         "linearizedBaseContracts": [
           455,
-          4641
+          4693
         ],
         "name": "Generator",
         "nodeType": "ContractDefinition",
@@ -1450,7 +1450,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+              "typeIdentifier": "t_contract$_GeneratorToken_$2567",
               "typeString": "contract GeneratorToken"
             },
             "typeName": {
@@ -1458,10 +1458,10 @@
               "id": 385,
               "name": "GeneratorToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2557,
+              "referencedDeclaration": 2567,
               "src": "309:14:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                 "typeString": "contract GeneratorToken"
               }
             },
@@ -1675,7 +1675,7 @@
                       "referencedDeclaration": 386,
                       "src": "585:5:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                        "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                         "typeString": "contract GeneratorToken"
                       }
                     },
@@ -1851,7 +1851,7 @@
                         "nodeType": "NewExpression",
                         "src": "593:18:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint8_$_t_address_$_t_uint32_$_t_uint256_$returns$_t_contract$_GeneratorToken_$2557_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint8_$_t_address_$_t_uint32_$_t_uint256_$returns$_t_contract$_GeneratorToken_$2567_$",
                           "typeString": "function (string memory,string memory,uint8,address,uint32,uint256) returns (contract GeneratorToken)"
                         },
                         "typeName": {
@@ -1859,10 +1859,10 @@
                           "id": 416,
                           "name": "GeneratorToken",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2557,
+                          "referencedDeclaration": 2567,
                           "src": "597:14:2",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                            "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                             "typeString": "contract GeneratorToken"
                           }
                         }
@@ -1877,13 +1877,13 @@
                       "nodeType": "FunctionCall",
                       "src": "593:74:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                        "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                         "typeString": "contract GeneratorToken"
                       }
                     },
                     "src": "585:82:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                      "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                       "typeString": "contract GeneratorToken"
                     }
                   },
@@ -1983,7 +1983,7 @@
                   "name": "isInitializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4640,
+                  "referencedDeclaration": 4692,
                   "src": "461:13:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2180,7 +2180,7 @@
                         "referencedDeclaration": 386,
                         "src": "867:5:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_GeneratorToken_$2557",
+                          "typeIdentifier": "t_contract$_GeneratorToken_$2567",
                           "typeString": "contract GeneratorToken"
                         }
                       }
@@ -2194,7 +2194,7 @@
                     "nodeType": "TupleExpression",
                     "src": "815:63:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_address_$_t_string_storage_$_t_contract$_GeneratorToken_$2557_$",
+                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_address_$_t_string_storage_$_t_contract$_GeneratorToken_$2567_$",
                       "typeString": "tuple(string storage ref,address,string storage ref,contract GeneratorToken)"
                     }
                   },
@@ -2352,8 +2352,8 @@
     "15": {
       "events": {},
       "links": {},
-      "address": "0x29a1b2c30f530e472795ad0798cb3b62e3b002e9",
-      "transactionHash": "0x71fbdf5e04005497e9e3e5cf3c38969292814bdbb3ab1ab0b0ed16c7871f05c7"
+      "address": "0xaa866944d773d68a47c18cf3e103f272c73f1316",
+      "transactionHash": "0x386b615773322214c230cd276bf064e3456e48f7b083d5f70aebd3ae7a51b919"
     },
     "5777": {
       "events": {},
@@ -2363,5 +2363,5 @@
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-08T16:07:06.789Z"
+  "updatedAt": "2018-09-08T18:55:27.898Z"
 }

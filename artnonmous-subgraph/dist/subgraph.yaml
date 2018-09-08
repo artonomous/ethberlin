@@ -6,7 +6,7 @@ dataSources:
     name: GeneratorRegistry
     source:
       abi: GeneratorRegistry
-      address: 154c14ab2d4abe74d13ac2a4b0b82082f4f2c270
+      address: 80a18194408ab9cb5b1fcafc4e10683e5cc2d2e1
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.1
@@ -22,3 +22,23 @@ dataSources:
         - event: 'RegistryEntryEVT(bytes32,address,bytes32)'
           handler: handleRegistryEntryEVT
       file: GeneratorRegistry/GeneratorRegistry.wasm
+  - kind: ethereum/contract
+    name: SoulToken
+    source:
+      abi: SoulToken
+      address: 9ffed5fb75c9a453a9db6f725e491832d84cca1f
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.1
+      language: wasm/assemblyscript
+      entities:
+        - SoulToken
+      abis:
+        - name: SoulToken
+          file: SoulToken/abis/SoulToken.json
+      eventHandlers:
+        - event: 'LogMint(address,uint256,uint256)'
+          handler: logMintHandler
+        - event: 'LogWithdraw(address,uint256,uint256)'
+          handler: logWithdrawHandler
+      file: SoulToken/SoulToken.wasm

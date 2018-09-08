@@ -52,7 +52,7 @@ contract EthBondingCurve is StandardToken, BancorFormula, Ownable {
     totalSupply_ = totalSupply_.add(tokensToMint);
     balances[msg.sender] = balances[msg.sender].add(tokensToMint);
     poolBalance = poolBalance.add(msg.value);
-    emit LogMint(tokensToMint, msg.value);
+    emit LogMint(msg.sender, tokensToMint, msg.value);
     return true;
   }
 
@@ -69,7 +69,7 @@ contract EthBondingCurve is StandardToken, BancorFormula, Ownable {
     poolBalance = poolBalance.sub(ethAmount);
     balances[msg.sender] = balances[msg.sender].sub(sellAmount);
     totalSupply_ = totalSupply_.sub(sellAmount);
-    emit LogWithdraw(sellAmount, ethAmount);
+    emit LogWithdraw(msg.sender, sellAmount, ethAmount);
     return true;
   }
 
@@ -88,7 +88,7 @@ contract EthBondingCurve is StandardToken, BancorFormula, Ownable {
     gasPrice = _gasPrice;
   }
 
-  event LogMint(uint256 amountMinted, uint256 totalCost);
-  event LogWithdraw(uint256 amountWithdrawn, uint256 reward);
-  event LogBondingCurve(string logString, uint256 value);
+  event LogMint(address sender, uint256 amountMinted, uint256 totalCost);
+  event LogWithdraw(address sender, uint256 amountWithdrawn, uint256 reward);
+  event LogBondingCurve(address sender, string logString, uint256 value);
 }

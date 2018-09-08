@@ -569,7 +569,7 @@
         "id": 2015,
         "nodeType": "ImportDirective",
         "scope": 2098,
-        "sourceUnit": 4623,
+        "sourceUnit": 4675,
         "src": "26:70:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -580,7 +580,7 @@
         "id": 2016,
         "nodeType": "ImportDirective",
         "scope": 2098,
-        "sourceUnit": 3055,
+        "sourceUnit": 3107,
         "src": "97:63:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -594,10 +594,10 @@
               "id": 2017,
               "name": "ERC721Token",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4622,
+              "referencedDeclaration": 4674,
               "src": "188:11:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721Token_$4622",
+                "typeIdentifier": "t_contract$_ERC721Token_$4674",
                 "typeString": "contract ERC721Token"
               }
             },
@@ -612,10 +612,10 @@
               "id": 2019,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3054,
+              "referencedDeclaration": 3106,
               "src": "201:7:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$3054",
+                "typeIdentifier": "t_contract$_Ownable_$3106",
                 "typeString": "contract Ownable"
               }
             },
@@ -625,15 +625,15 @@
           }
         ],
         "contractDependencies": [
-          2823,
-          2874,
-          3054,
-          3533,
-          3553,
-          3560,
-          3682,
-          4230,
-          4622
+          2875,
+          2926,
+          3106,
+          3585,
+          3605,
+          3612,
+          3734,
+          4282,
+          4674
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -641,15 +641,15 @@
         "id": 2097,
         "linearizedBaseContracts": [
           2097,
-          3054,
-          4622,
-          3560,
-          3553,
-          3533,
-          4230,
-          3682,
-          2874,
-          2823
+          3106,
+          4674,
+          3612,
+          3605,
+          3585,
+          4282,
+          3734,
+          2926,
+          2875
         ],
         "name": "ArtPieceToken",
         "nodeType": "ContractDefinition",
@@ -719,7 +719,7 @@
                       "name": "name_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4262,
+                      "referencedDeclaration": 4314,
                       "src": "341:5:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -765,7 +765,7 @@
                       "name": "symbol_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4264,
+                      "referencedDeclaration": 4316,
                       "src": "360:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -841,10 +841,10 @@
                   "name": "ERC721Token",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4622,
+                  "referencedDeclaration": 4674,
                   "src": "300:11:6",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_ERC721Token_$4622_$",
+                    "typeIdentifier": "t_type$_t_contract$_ERC721Token_$4674_$",
                     "typeString": "type(contract ERC721Token)"
                   }
                 },
@@ -1139,9 +1139,9 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4542
+                        4594
                       ],
-                      "referencedDeclaration": 4542,
+                      "referencedDeclaration": 4594,
                       "src": "607:5:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -1273,7 +1273,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3002,
+                  "referencedDeclaration": 3054,
                   "src": "569:9:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1580,7 +1580,7 @@
         "id": 2015,
         "nodeType": "ImportDirective",
         "scope": 2098,
-        "sourceUnit": 4623,
+        "sourceUnit": 4675,
         "src": "26:70:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1591,7 +1591,7 @@
         "id": 2016,
         "nodeType": "ImportDirective",
         "scope": 2098,
-        "sourceUnit": 3055,
+        "sourceUnit": 3107,
         "src": "97:63:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1605,10 +1605,10 @@
               "id": 2017,
               "name": "ERC721Token",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4622,
+              "referencedDeclaration": 4674,
               "src": "188:11:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721Token_$4622",
+                "typeIdentifier": "t_contract$_ERC721Token_$4674",
                 "typeString": "contract ERC721Token"
               }
             },
@@ -1623,10 +1623,10 @@
               "id": 2019,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3054,
+              "referencedDeclaration": 3106,
               "src": "201:7:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$3054",
+                "typeIdentifier": "t_contract$_Ownable_$3106",
                 "typeString": "contract Ownable"
               }
             },
@@ -1636,15 +1636,15 @@
           }
         ],
         "contractDependencies": [
-          2823,
-          2874,
-          3054,
-          3533,
-          3553,
-          3560,
-          3682,
-          4230,
-          4622
+          2875,
+          2926,
+          3106,
+          3585,
+          3605,
+          3612,
+          3734,
+          4282,
+          4674
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -1652,15 +1652,15 @@
         "id": 2097,
         "linearizedBaseContracts": [
           2097,
-          3054,
-          4622,
-          3560,
-          3553,
-          3533,
-          4230,
-          3682,
-          2874,
-          2823
+          3106,
+          4674,
+          3612,
+          3605,
+          3585,
+          4282,
+          3734,
+          2926,
+          2875
         ],
         "name": "ArtPieceToken",
         "nodeType": "ContractDefinition",
@@ -1730,7 +1730,7 @@
                       "name": "name_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4262,
+                      "referencedDeclaration": 4314,
                       "src": "341:5:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -1776,7 +1776,7 @@
                       "name": "symbol_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4264,
+                      "referencedDeclaration": 4316,
                       "src": "360:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -1852,10 +1852,10 @@
                   "name": "ERC721Token",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4622,
+                  "referencedDeclaration": 4674,
                   "src": "300:11:6",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_ERC721Token_$4622_$",
+                    "typeIdentifier": "t_type$_t_contract$_ERC721Token_$4674_$",
                     "typeString": "type(contract ERC721Token)"
                   }
                 },
@@ -2150,9 +2150,9 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4542
+                        4594
                       ],
-                      "referencedDeclaration": 4542,
+                      "referencedDeclaration": 4594,
                       "src": "607:5:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -2284,7 +2284,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3002,
+                  "referencedDeclaration": 3054,
                   "src": "569:9:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2668,8 +2668,8 @@
         }
       },
       "links": {},
-      "address": "0xe954014a3a9abd338f2c63e788a051f289ccca16",
-      "transactionHash": "0xc76d6c41668756178750c7e42831a7046718cf5b84400b97193463beeac312af"
+      "address": "0x1399a37b8e63cbbcd87d145afb4bcb2b7e64e2c5",
+      "transactionHash": "0x035889331923e0e97ce5bcf74d5f80aae1d9d8ef913e460c095b89a0bdabde61"
     },
     "5777": {
       "events": {
@@ -2775,5 +2775,5 @@
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-08T16:07:07.254Z"
+  "updatedAt": "2018-09-08T18:55:28.357Z"
 }
