@@ -1,7 +1,7 @@
+
 .header {
   height: 3em;
   background-color: #202124;
-  color: white;
   display: flex;
   align-items: center;
 }
@@ -13,7 +13,6 @@
 
 .header a {
   text-decoration: none;
-  color: #FF8A65;
 }
 
 .header .left * {
@@ -53,6 +52,5 @@
 }
 
 .buy-soul {
-  background-color: #FF8A65;
   cursor: pointer;
 }

@@ -44,3 +44,15 @@ body {
 .box1 { flex: 0 30%;} /* Initial width of 200, won't grow, can shrink if necessary */
 .box2 { flex: 30% } /* Initial width of 400, grows to fill available space, can shrink if necessary */
 .box3 { flex: 0 30% } /* Initial width of 400, won't grow, can shrink if necessary */
+
+.color-text{
+  color: white;
+}
+
+.color-soul {
+  color: #FF8A65;
+}
+
+.background-color-soul {
+  background-color: #FF8A65;
+}
