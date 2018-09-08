@@ -3,6 +3,8 @@ import Blockies from "react-blockies";
 import ReactModal from "react-modal";
 import { Link } from "react-router-dom";
 import web3 from "web3";
+import { Query } from "react-apollo";
+import gql from "graphql-tag";
 
 import "./Header.css";
 
@@ -67,9 +69,27 @@ class Header extends React.Component {
         <div className="right">
           <span className="soul">
             {" "}
-            {soulTokenBalance &&
-              soulTokenBalance.get("value") &&
-              web3.utils.fromWei(soulTokenBalance.get("value"))}{" "}
+            <Query
+              query={gql`
+                {
+                  soulTokens(id: ${accounts[0]}) {
+                    id
+                    owner
+                    balance
+                  }
+                }
+              `}
+            >
+              {({ loading, error, data }) => (
+                <span>
+                  {!loading &&
+                    data &&
+                    data.soulTokens &&
+                    data.soulTokens[0] &&
+                    web3.utils.fromWei(data.soulTokens[0].balance)}{" "}
+                </span>
+              )}
+            </Query>
             SOUL
           </span>
           <span
