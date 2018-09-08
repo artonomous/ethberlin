@@ -1,9 +1,39 @@
 import React from 'react';
 import Blockies from 'react-blockies';
+import ReactModal from 'react-modal';
 import './Header.css';
 
+import PurchaseModal from './PurchaseModal';
+
+
 class Header extends React.Component {
+  state = {
+    showEthModal: false,
+    showSoulModal: false
+  };
+
+  handleModalEthOpen = () => {
+    this.setState({ showEthModal: true });
+  }
+
+  handleModalSoulOpen = () => {
+    this.setState({ showSoulModal: true });
+  }
+
   render() {
+    const customStyles = {
+      content : {
+        top                   : '50%',
+        left                  : '50%',
+        right                 : 'auto',
+        bottom                : 'auto',
+        marginRight           : '-30%',
+        transform             : 'translate(-50%, -50%)',
+        height                : '60%',
+        width                 : '40%',
+      }
+    };
+
     return (
         <div className='header'>
           <div className="left">
@@ -26,9 +56,28 @@ class Header extends React.Component {
           </div>
           <div className="right">
             <span className="ether">0.2 ETH</span>
-            <span className="button buy-ether">Purchase ETH</span>
+            <span
+              className="button buy-ether"
+              onClick={this.handleModalEthOpen}>
+              Buy/Sell ETH
+            </span>
+            <ReactModal 
+              isOpen={this.state.showEthModal}
+              style={customStyles}
+            >
+              <PurchaseModal token="ETH" /> 
+            </ReactModal>
             <span className="soul">0.2 SOUL</span>
-            <span className="button buy-soul">Purchase SOUL</span>
+            <span
+              className="button buy-soul"
+              onClick={this.handleModalSoulOpen}>
+              Buy/Sell SOUL</span>
+            <ReactModal 
+              isOpen={this.state.showSoulModal}
+              style={customStyles}
+            >
+              <PurchaseModal token="SOUL" /> 
+            </ReactModal>
           </div>
         </div>
     );
