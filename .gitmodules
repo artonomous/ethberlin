@@ -1,0 +1,3 @@
+[submodule "graph-node-container/graph-node"]
+	path = graph-node-container/graph-node
+	url = https://github.com/graphprotocol/graph-node.git

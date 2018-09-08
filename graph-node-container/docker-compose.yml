@@ -1,0 +1,40 @@
+version: '2'
+services:
+  ipfs:
+    image: ipfs/go-ipfs:latest
+    volumes:
+      - "./data/ipfs_staging:/export"
+      - "./data/ipfs:/data/ipfs"
+    networks:
+      app_net:
+        ipv4_address: 172.18.18.10
+  db:
+    image: postgres:10.5
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=artonomous-subgraph
+    networks:
+      app_net:
+        ipv4_address: 172.18.18.20
+  graph-node:
+    build: ./
+    ports:
+      - 8000:8000
+      - 8001:8001
+      - 8020:8020
+    networks:
+      app_net:
+        ipv4_address: 172.18.18.30
+    environment:
+      - IPFS_IP=172.18.18.10
+      - DB_IP=172.18.18.20
+      - HOST_IP=172.18.18.1
+networks:
+  app_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.18.18.0/24
+        gateway: 172.18.18.1
