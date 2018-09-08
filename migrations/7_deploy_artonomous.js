@@ -12,4 +12,7 @@ module.exports = async function(deployer) {
   const generatorRegistry = await GeneratorRegistry.deployed();
 
   deployer.deploy(Artonomous, auctionHouse.address, generatorRegistry.address, artPieceToken.address, soulToken.address);
+
+  const artonomous = Artonomous.deployed();
+  artPieceToken.transferOwnership(artonomous.address);
 };
