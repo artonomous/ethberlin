@@ -91,30 +91,21 @@
     "type": "event"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "getInfo",
-    "outputs": [
+    "anonymous": false,
+    "inputs": [
       {
-        "name": "",
-        "type": "address"
+        "indexed": false,
+        "name": "tokenId",
+        "type": "uint256"
       },
       {
-        "name": "",
-        "type": "address"
-      },
-      {
-        "name": "",
-        "type": "address"
-      },
-      {
-        "name": "",
+        "indexed": false,
+        "name": "generator",
         "type": "address"
       }
     ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "name": "AuctionStarted",
+    "type": "event"
   },
   {
     "constant": false,

@@ -1,35 +1,75 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import { actions } from "redux-saga-web3";
+import { connect } from "react-redux";
+import { compose, lifecycle } from "recompose";
+import { Route } from "react-router-dom";
+
+import {
+  actions as artonomousActions,
+  selectors as artonomousSelectors
+} from "./contracts/Artonomous";
+
+import HeaderContainer from "./containers/HeaderContainer";
+import Footer from "./components/Footer";
+import Generators from "./Generators";
+import HomeContainer from "./containers/HomeContainer";
+
+import withLoading from "./utils/withLoading";
 
 class App extends Component {
   render() {
+    const { artonomousInfo } = this.props;
+    const value = artonomousInfo.get("value");
+    const auctionHouse = value[0];
+    const generatorRegistry = value[1];
+    const artPieceToken = value[2];
+    const soulToken = value[3];
+
     return (
-      <div className="root">
-        <div className="art-root">
-          <img className="art-piece" src="https://images.unsplash.com/photo-1536314360972-f52b0947329e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f6dd135053c008197d7ed1943586f88f&auto=format&fit=crop&w=1650&q=80" />
-          <div className="art-info">
-            <p className="price">20 ETH</p>
-            <p className="timeleft">23 h 50 min 3 sec</p>
-            <p className="generator">Awesome hash</p>
-            <input type="number" placeholder="0.00"/>
-            <span className="price-unit">ETH</span>
-            <div className="button bid-button background-color-soul">Bid</div>
-          </div>
-        </div>
-        <div className="historical-pieces">
-          <div className="box1">
-            <img src="https://images.unsplash.com/photo-1536314360972-f52b0947329e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f6dd135053c008197d7ed1943586f88f&auto=format&fit=crop&w=1650&q=80" />
-          </div>
-          <div className="box2">
-            <img src="https://images.unsplash.com/photo-1536314360972-f52b0947329e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f6dd135053c008197d7ed1943586f88f&auto=format&fit=crop&w=1650&q=80" />
-          </div>
-          <div className="box3">
-            <img src="https://images.unsplash.com/photo-1536314360972-f52b0947329e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f6dd135053c008197d7ed1943586f88f&auto=format&fit=crop&w=1650&q=80" />
-          </div>
-        </div>
+      <div className="wrapper">
+        <HeaderContainer soulToken={soulToken} />
+        <Route
+          exact
+          path="/"
+          render={() => <HomeContainer auctionHouse={auctionHouse} />}
+        />
+        <Route
+          exact
+          path="/generators"
+          component={Generators}
+          generatorRegistry={generatorRegistry}
+        />
+        <Footer />
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  artonomousInfo: artonomousSelectors.methods.getInfo()(state),
+  accounts: state.get("accounts"),
+  router: state.get("router")
+});
+
+const mapDispatchToProps = dispatch => ({
+  getAccounts: () => dispatch(actions.accounts.getRequest()),
+  getLatestBlock: () => dispatch(actions.blocks.getBlockHeader("latest")),
+  getArtonomous: () => dispatch(artonomousActions.methods.getInfo().call())
+});
+
+export default compose(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  ),
+  lifecycle({
+    componentDidMount() {
+      this.props.getAccounts();
+      this.props.getLatestBlock();
+      this.props.getArtonomous();
+    }
+  }),
+  withLoading(({ accounts, artonomousInfo }) => {
+    return !accounts || !accounts.get("items") || !artonomousInfo.get("value");
+  })
+)(App);

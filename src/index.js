@@ -1,20 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider as ReduxProvider } from "react-redux";
+import createHistory from "history/createBrowserHistory";
+import { ConnectedRouter } from "connected-react-router/immutable";
 
-import Header from './components/Header';
-import './index.css';
-import App from './App';
-import Generators from './Generators';
+import createStore from "./store";
+import App from "./App";
+
+import "./index.css";
+
+// Create a history
+const history = createHistory();
+const store = createStore(history);
 
 ReactDOM.render(
-  <div>
-    <Router>
-      <div>
-        <Header />
-        <Route exact path="/" component={App} />
-        <Route exact path="/generators" component={Generators} />
-      </div>
-    </Router>
-  </div>,
-  document.getElementById('root'));
+  <ReduxProvider store={store}>
+    <ConnectedRouter history={history}>
+      <App />
+    </ConnectedRouter>
+  </ReduxProvider>,
+  document.getElementById("root")
+);
