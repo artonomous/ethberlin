@@ -87,6 +87,7 @@ body {
 
 .art-info .button {
   height: 30px;
+  width: 50px;
 }
 
 .art-info .price::before,

@@ -3,7 +3,7 @@ import React from "react";
 export default class AboutContent extends React.PureComponent {
   render() {
     return (
-      <div class="textcontent">
+      <div className="textcontent">
         <h1>
           <a id="ARTONOMOUS_0" />
           ARTONOMOUS
