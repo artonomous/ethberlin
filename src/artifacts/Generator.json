@@ -171,7 +171,7 @@
         "id": 372,
         "nodeType": "ImportDirective",
         "scope": 456,
-        "sourceUnit": 4639,
+        "sourceUnit": 4681,
         "src": "26:56:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -207,10 +207,10 @@
               "id": 375,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4638,
+              "referencedDeclaration": 4680,
               "src": "179:13:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$4638",
+                "typeIdentifier": "t_contract$_Initializable_$4680",
                 "typeString": "contract Initializable"
               }
             },
@@ -221,7 +221,7 @@
         ],
         "contractDependencies": [
           2554,
-          4638
+          4680
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -229,7 +229,7 @@
         "id": 455,
         "linearizedBaseContracts": [
           455,
-          4638
+          4680
         ],
         "name": "Generator",
         "nodeType": "ContractDefinition",
@@ -883,7 +883,7 @@
                   "name": "isInitializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4637,
+                  "referencedDeclaration": 4679,
                   "src": "461:13:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1271,7 +1271,7 @@
         "id": 372,
         "nodeType": "ImportDirective",
         "scope": 456,
-        "sourceUnit": 4639,
+        "sourceUnit": 4681,
         "src": "26:56:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1307,10 +1307,10 @@
               "id": 375,
               "name": "Initializable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4638,
+              "referencedDeclaration": 4680,
               "src": "179:13:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Initializable_$4638",
+                "typeIdentifier": "t_contract$_Initializable_$4680",
                 "typeString": "contract Initializable"
               }
             },
@@ -1321,7 +1321,7 @@
         ],
         "contractDependencies": [
           2554,
-          4638
+          4680
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -1329,7 +1329,7 @@
         "id": 455,
         "linearizedBaseContracts": [
           455,
-          4638
+          4680
         ],
         "name": "Generator",
         "nodeType": "ContractDefinition",
@@ -1983,7 +1983,7 @@
                   "name": "isInitializer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4637,
+                  "referencedDeclaration": 4679,
                   "src": "461:13:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2352,8 +2352,8 @@
     "15": {
       "events": {},
       "links": {},
-      "address": "0x4eee4559bd589b1cdfc419f0eed2ff9cbd47f439",
-      "transactionHash": "0xec67033be499ba49f611df985f8d6bde0913cfca91285979c36a9fec96f49331"
+      "address": "0x8c7ef141e529c5263e2a45581d1c8a39f64dc5df",
+      "transactionHash": "0x997d490dbddcebc314f7c680b4bdeedbaa8c4e528ca5905433d9d3a64aa5eec0"
     },
     "1536396012109": {
       "events": {},
@@ -2369,5 +2369,5 @@
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-08T15:04:46.360Z"
+  "updatedAt": "2018-09-08T16:24:55.696Z"
 }

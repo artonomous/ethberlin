@@ -23,6 +23,7 @@ const mapDispatchToProps = (dispatch, props) => ({
       soulTokenActions.methods.balanceOf({ at: props.soulToken }).call(address)
     )
 });
+
 export default compose(
   connect(
     mapStateToProps,

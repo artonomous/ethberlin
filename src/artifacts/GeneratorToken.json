@@ -628,7 +628,7 @@
         "id": 2512,
         "nodeType": "ImportDirective",
         "scope": 2555,
-        "sourceUnit": 3182,
+        "sourceUnit": 3224,
         "src": "26:71:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -639,7 +639,7 @@
         "id": 2513,
         "nodeType": "ImportDirective",
         "scope": 2555,
-        "sourceUnit": 3504,
+        "sourceUnit": 3546,
         "src": "98:71:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -650,7 +650,7 @@
         "id": 2514,
         "nodeType": "ImportDirective",
         "scope": 2555,
-        "sourceUnit": 2792,
+        "sourceUnit": 2834,
         "src": "171:33:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -664,10 +664,10 @@
               "id": 2515,
               "name": "TokenBondingCurve",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2791,
+              "referencedDeclaration": 2833,
               "src": "233:17:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_TokenBondingCurve_$2791",
+                "typeIdentifier": "t_contract$_TokenBondingCurve_$2833",
                 "typeString": "contract TokenBondingCurve"
               }
             },
@@ -682,10 +682,10 @@
               "id": 2517,
               "name": "DetailedERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3181,
+              "referencedDeclaration": 3223,
               "src": "252:13:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DetailedERC20_$3181",
+                "typeIdentifier": "t_contract$_DetailedERC20_$3223",
                 "typeString": "contract DetailedERC20"
               }
             },
@@ -697,13 +697,13 @@
         "contractDependencies": [
           2009,
           2301,
-          2791,
-          3051,
-          3147,
-          3181,
-          3224,
-          3256,
-          3503
+          2833,
+          3093,
+          3189,
+          3223,
+          3266,
+          3298,
+          3545
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -711,15 +711,15 @@
         "id": 2554,
         "linearizedBaseContracts": [
           2554,
-          3181,
-          2791,
-          3051,
+          3223,
+          2833,
+          3093,
           2301,
           2009,
-          3503,
-          3147,
-          3224,
-          3256
+          3545,
+          3189,
+          3266,
+          3298
         ],
         "name": "GeneratorToken",
         "nodeType": "ContractDefinition",
@@ -744,10 +744,10 @@
                       "name": "reserveToken",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2598,
+                      "referencedDeclaration": 2640,
                       "src": "469:12:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_StandardToken_$3503",
+                        "typeIdentifier": "t_contract$_StandardToken_$3545",
                         "typeString": "contract StandardToken"
                       }
                     },
@@ -781,10 +781,10 @@
                         "name": "StandardToken",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3503,
+                        "referencedDeclaration": 3545,
                         "src": "484:13:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_StandardToken_$3503_$",
+                          "typeIdentifier": "t_type$_t_contract$_StandardToken_$3545_$",
                           "typeString": "type(contract StandardToken)"
                         }
                       },
@@ -798,13 +798,13 @@
                       "nodeType": "FunctionCall",
                       "src": "484:28:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_StandardToken_$3503",
+                        "typeIdentifier": "t_contract$_StandardToken_$3545",
                         "typeString": "contract StandardToken"
                       }
                     },
                     "src": "469:43:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_StandardToken_$3503",
+                      "typeIdentifier": "t_contract$_StandardToken_$3545",
                       "typeString": "contract StandardToken"
                     }
                   },
@@ -826,7 +826,7 @@
                       "name": "reserveRatio",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2602,
+                      "referencedDeclaration": 2644,
                       "src": "518:12:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint32",
@@ -872,7 +872,7 @@
                       "name": "gasPrice",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2605,
+                      "referencedDeclaration": 2647,
                       "src": "552:8:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -961,10 +961,10 @@
                   "name": "DetailedERC20",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3181,
+                  "referencedDeclaration": 3223,
                   "src": "418:13:9",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_DetailedERC20_$3181_$",
+                    "typeIdentifier": "t_type$_t_contract$_DetailedERC20_$3223_$",
                     "typeString": "type(contract DetailedERC20)"
                   }
                 },
@@ -1184,7 +1184,7 @@
         "id": 2512,
         "nodeType": "ImportDirective",
         "scope": 2555,
-        "sourceUnit": 3182,
+        "sourceUnit": 3224,
         "src": "26:71:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1195,7 +1195,7 @@
         "id": 2513,
         "nodeType": "ImportDirective",
         "scope": 2555,
-        "sourceUnit": 3504,
+        "sourceUnit": 3546,
         "src": "98:71:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1206,7 +1206,7 @@
         "id": 2514,
         "nodeType": "ImportDirective",
         "scope": 2555,
-        "sourceUnit": 2792,
+        "sourceUnit": 2834,
         "src": "171:33:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1220,10 +1220,10 @@
               "id": 2515,
               "name": "TokenBondingCurve",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2791,
+              "referencedDeclaration": 2833,
               "src": "233:17:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_TokenBondingCurve_$2791",
+                "typeIdentifier": "t_contract$_TokenBondingCurve_$2833",
                 "typeString": "contract TokenBondingCurve"
               }
             },
@@ -1238,10 +1238,10 @@
               "id": 2517,
               "name": "DetailedERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3181,
+              "referencedDeclaration": 3223,
               "src": "252:13:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DetailedERC20_$3181",
+                "typeIdentifier": "t_contract$_DetailedERC20_$3223",
                 "typeString": "contract DetailedERC20"
               }
             },
@@ -1253,13 +1253,13 @@
         "contractDependencies": [
           2009,
           2301,
-          2791,
-          3051,
-          3147,
-          3181,
-          3224,
-          3256,
-          3503
+          2833,
+          3093,
+          3189,
+          3223,
+          3266,
+          3298,
+          3545
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -1267,15 +1267,15 @@
         "id": 2554,
         "linearizedBaseContracts": [
           2554,
-          3181,
-          2791,
-          3051,
+          3223,
+          2833,
+          3093,
           2301,
           2009,
-          3503,
-          3147,
-          3224,
-          3256
+          3545,
+          3189,
+          3266,
+          3298
         ],
         "name": "GeneratorToken",
         "nodeType": "ContractDefinition",
@@ -1300,10 +1300,10 @@
                       "name": "reserveToken",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2598,
+                      "referencedDeclaration": 2640,
                       "src": "469:12:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_StandardToken_$3503",
+                        "typeIdentifier": "t_contract$_StandardToken_$3545",
                         "typeString": "contract StandardToken"
                       }
                     },
@@ -1337,10 +1337,10 @@
                         "name": "StandardToken",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3503,
+                        "referencedDeclaration": 3545,
                         "src": "484:13:9",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_StandardToken_$3503_$",
+                          "typeIdentifier": "t_type$_t_contract$_StandardToken_$3545_$",
                           "typeString": "type(contract StandardToken)"
                         }
                       },
@@ -1354,13 +1354,13 @@
                       "nodeType": "FunctionCall",
                       "src": "484:28:9",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_StandardToken_$3503",
+                        "typeIdentifier": "t_contract$_StandardToken_$3545",
                         "typeString": "contract StandardToken"
                       }
                     },
                     "src": "469:43:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_StandardToken_$3503",
+                      "typeIdentifier": "t_contract$_StandardToken_$3545",
                       "typeString": "contract StandardToken"
                     }
                   },
@@ -1382,7 +1382,7 @@
                       "name": "reserveRatio",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2602,
+                      "referencedDeclaration": 2644,
                       "src": "518:12:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint32",
@@ -1428,7 +1428,7 @@
                       "name": "gasPrice",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2605,
+                      "referencedDeclaration": 2647,
                       "src": "552:8:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1517,10 +1517,10 @@
                   "name": "DetailedERC20",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3181,
+                  "referencedDeclaration": 3223,
                   "src": "418:13:9",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_DetailedERC20_$3181_$",
+                    "typeIdentifier": "t_type$_t_contract$_DetailedERC20_$3223_$",
                     "typeString": "type(contract DetailedERC20)"
                   }
                 },
@@ -1719,5 +1719,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-08T15:04:44.134Z"
+  "updatedAt": "2018-09-08T16:24:53.812Z"
 }
