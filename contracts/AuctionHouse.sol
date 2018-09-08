@@ -26,13 +26,7 @@ contract AuctionHouse is Ownable {
     _;
   }
 
-  // verifies that an auction is already in progress
-  modifier canEnd() {
-    require(auction.endTime != 0, "No auction in progress");
-    _;
-  }
-
-  function end() external canEnd onlyOwner {
+  function end() external onlyOwner {
     emit Ended(auction.tokenId, getCurrentPrice(), now);
     delete auction;
   }
@@ -51,7 +45,7 @@ contract AuctionHouse is Ownable {
   }
 
   function getStartingPrice() public pure returns (uint256) {
-    return 1000000000000;
+    return 10 ** 18;
   }
 
   function getCurrentPrice() public view returns (uint256) {

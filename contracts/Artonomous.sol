@@ -48,14 +48,16 @@ contract Artonomous {
 
     artPieceToken.transferFrom(this, msg.sender, tokenId);
 
+    auctionHouse.end();
+
+    startAuction();
+    
     // Claim art for free
-    if (endTime > now) {
+    if (endTime <= now) {
       // Refund if any eth paid
       msg.sender.transfer(msg.value);
       return;
     }
-
-    auctionHouse.end();
 
     uint256 remainder = msg.value - price;
      // refund extra value
