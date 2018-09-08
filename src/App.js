@@ -33,7 +33,9 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={() => <HomeContainer auctionHouse={auctionHouse} />}
+          render={() => <HomeContainer
+                          artPieceToken={artPieceToken}
+                          auctionHouse={auctionHouse} />}
         />
         <Route
           exact
