@@ -30,7 +30,9 @@ class Home extends Component {
       return (
         <div className="root">
           <div className="art-root">
-            <LoadingLogo className="art-piece" />
+            <div className="piece-container">
+              <LoadingLogo className="art-piece" />
+            </div>
             <div className="art-info">
               <div className="generator">{generatorAddress}</div>
               <div className="last-bidder">Last bidder</div>

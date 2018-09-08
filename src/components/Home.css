@@ -7,6 +7,7 @@ body {
 .root {
   text-align: center;
   flex: 1;
+  display: flex;
 }
 
 .textcontent {
@@ -29,6 +30,14 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 3em;
+  width: 100%;
+}
+
+.piece-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .root h1 {
@@ -46,6 +55,7 @@ body {
   text-align: left;
   margin-top: 30px;
   width: 65%;
+  max-height: 100px;
 }
 
 .art-info .price,
@@ -56,13 +66,13 @@ body {
 }
 
 .art-info .generator {
-  width:350px;
+  width: 350px;
   margin-left: 1em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 2em;
-  font-weight:bolder;
+  font-weight: bolder;
 }
 
 .art-info .timeleft {
@@ -70,7 +80,6 @@ body {
   flex-basis: 300px;
   margin: 0 8%;
 }
-
 
 .art-info .price::before,
 .art-info .timeleft::before,
