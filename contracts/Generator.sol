@@ -26,4 +26,13 @@ contract Generator is Initializable {
     token = new GeneratorToken(name, "", 18, registry.getToken(), 666666, 20000000000);
     registry.fireRegistryEvent("constructed");
   }
+
+  function getGenerator() public view returns (string, address, string, GeneratorToken) {
+    return (
+      name,
+      creator,
+      sourceUri,
+      token
+    );
+  }
 }
