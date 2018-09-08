@@ -8,6 +8,7 @@ import { Route } from "react-router-dom";
 import createStore from "./store";
 
 import Header from "./components/Header";
+import Footer from './components/Footer';
 import "./index.css";
 import App from "./App";
 import Generators from "./Generators";
@@ -23,6 +24,7 @@ ReactDOM.render(
         <Header />
         <Route exact path="/" component={App} />
         <Route exact path="/generators" component={Generators} />
+        <Footer />
       </div>
     </ConnectedRouter>
   </ReduxProvider>,
