@@ -104,23 +104,32 @@ body {
 .box2 { flex: 30% } /* Initial width of 400, grows to fill available space, can shrink if necessary */
 .box3 { flex: 0 30% } /* Initial width of 400, won't grow, can shrink if necessary */
 
-.historical-info {
-  width: 300px;
-  border: 1px solid black;
-  display: inline-block;
-  text-align: left;
+.historical-info-wrapper {
   background-color: #FAFAFA;
   box-shadow: 1px 3px 0px 0px rgba(0,0,0,0.75); 
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.no-border-button {
+  border-left: none;
+  border-right: none;
+}
+
+.historical-info {
+  width: 300px;
+  text-align: left;
+  display: flex;
 }
 
 .historical-info p {
-  margin-left: 1em;
+  margin-left: 2em;
 }
 
 .historical-info p.sold-for::before, .historical-info p.generator::before {
   display: block;
   border-bottom: 1px dashed black;
-  width: 30%;
+  width: 80%;
   margin-bottom: 1em;
   font-size: 0.7em;
 }
