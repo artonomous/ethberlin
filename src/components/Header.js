@@ -111,7 +111,7 @@ class Header extends React.Component {
           >
             <PurchaseModal token="ETH" />
           </ReactModal>
-          <span className="soul">0.2 SOUL</span>
+          <span className="soul"> {this.props.soulTokenBalance && this.props.soulTokenBalance.get("value")} SOUL</span>
           <span
             className="button buy-soul background-color-soul"
             onClick={this.handleModalSoulOpen}
