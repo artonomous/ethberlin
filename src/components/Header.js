@@ -75,14 +75,18 @@ class Header extends React.Component {
                   soulTokens(id: ${accounts[0]}) {
                     id
                     owner
-                    balance 
+                    balance
                   }
                 }
               `}
             >
               {({ loading, error, data }) => (
                 <span>
-                  {!loading && web3.utils.fromWei(data.soulTokens[0].balance)}{" "}
+                  {!loading &&
+                    data &&
+                    data.soulTokens &&
+                    data.soulTokens[0] &&
+                    web3.utils.fromWei(data.soulTokens[0].balance)}{" "}
                 </span>
               )}
             </Query>
