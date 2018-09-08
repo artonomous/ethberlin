@@ -818,9 +818,9 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-"graph-cli@ssh://git@github.com:graphprotocol/graph-cli.git":
+"graph-cli@https://github.com/graphprotocol/graph-cli.git#ethberlin":
   version "0.2.4"
-  resolved "ssh://git@github.com:graphprotocol/graph-cli.git#0be6a75b05532b9810cff847bc2ed70f0097433c"
+  resolved "https://github.com/graphprotocol/graph-cli.git#d6e3e7286b25d226b92962200bc0841fc5c44f1c"
   dependencies:
     assemblyscript "https://github.com/AssemblyScript/assemblyscript#c4ebc8c291c1068da73ddf1a381eab93e1f69e11"
     chalk "^2.4.1"

@@ -6,7 +6,7 @@ dataSources:
     name: GeneratorRegistry
     source:
       abi: GeneratorRegistry
-      address: 80a18194408ab9cb5b1fcafc4e10683e5cc2d2e1
+      address: 53306afc806c5386c1c46d29a1366b784b9b5096
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.1
@@ -26,7 +26,7 @@ dataSources:
     name: SoulToken
     source:
       abi: SoulToken
-      address: 9ffed5fb75c9a453a9db6f725e491832d84cca1f
+      address: 2109413664FF308cb23b5F9903B5bD47F97C93eD
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.1

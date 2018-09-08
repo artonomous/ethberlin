@@ -1,16 +1,16 @@
 {
-    "name": "artnonmous-subgraph",
-    "version": "0.0.1",
-    "description": "Artnonmous subgraph for The Graph",
-    "scripts": {
-      "codegen": "graph codegen subgraph.yaml",
-      "build": "graph build subgraph.yaml",
-      "build-ipfs": "graph build --ipfs /ip4/127.0.0.1/tcp/5001 subgraph.yaml"
-    },
-    "author": "Artnonmous",
-    "license": "UNLICENSED",
-    "devDependencies": {
-      "ganache-cli": "^6.1.7",
-      "graph-cli": "ssh://git@github.com:graphprotocol/graph-cli.git"
-    }
+  "name": "artnonmous-subgraph",
+  "version": "0.0.1",
+  "description": "Artnonmous subgraph for The Graph",
+  "scripts": {
+    "codegen": "graph codegen subgraph.yaml",
+    "build": "graph build subgraph.yaml",
+    "build-ipfs": "graph build --ipfs /ip4/127.0.0.1/tcp/5001 subgraph.yaml"
+  },
+  "author": "Artnonmous",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "ganache-cli": "^6.1.7",
+    "graph-cli": "https://github.com/graphprotocol/graph-cli.git#ethberlin"
   }
+}

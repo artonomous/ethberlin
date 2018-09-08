@@ -21,6 +21,8 @@ services:
     networks:
       app_net:
         ipv4_address: 172.18.18.20
+    ports:
+      - 5432:5432
   graph-node:
     build: ./
     ports:

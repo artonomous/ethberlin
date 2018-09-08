@@ -9,6 +9,7 @@ export { allocate_memory }
 declare namespace store {
   function set(entity: string, id: string, data: Entity): void
   function remove(entity: string, id: string): void
+  function get(entity: string, id: string): Entity
 }
 
 /** Host ethereum interface */
@@ -463,6 +464,41 @@ class Value {
   kind: ValueKind
   data: ValuePayload
 
+  toAddress(): Address {
+    assert(this.kind == ValueKind.BYTES, 'Value is not an address.')
+    return changetype<Address>(this.data as u32)
+  }
+
+  toBoolean(): boolean {
+    assert(this.kind == ValueKind.BOOL, 'Value is not a boolean.')
+    return this.data != 0
+  }
+
+  toBigInt(): BigInt {
+    assert(this.kind == ValueKind.BIGINT, 'Value is not an I256, U256 or BigInt.')
+    return changetype<BigInt>(this.data as u32)
+  }
+
+  toBytes(): Bytes {
+    assert(this.kind == ValueKind.BYTES, 'Value is not a byte array.')
+    return changetype<Bytes>(this.data as u32)
+  }
+
+  toU32(): u32 {
+    assert(this.kind == ValueKind.INT, 'Value is not an u32.')
+    return this.data as u32
+  }
+
+  toString(): string {
+    assert(this.kind == ValueKind.STRING, 'Value is not a string.')
+    return changetype<string>(this.data as u32)
+  }
+
+  toArray<T>(): Array<T> {
+    assert(this.kind == ValueKind.ARRAY, 'Value is not an array.')
+    return changetype<Array<T>>(this.data as u32)
+  }
+
   static fromAddress(address: Address): Value {
     let value = new Value()
     value.kind = ValueKind.BYTES
@@ -524,6 +560,13 @@ class Value {
     value.data = s as u64
     return value
   }
+
+  static fromArray<T>(array: Array<T>): Value {
+    let value = new Value()
+    value.kind = ValueKind.ARRAY
+    value.data = array as u64
+    return value
+  }
 }
 
 /**
@@ -532,6 +575,35 @@ class Value {
  * `Value` objects.
  */
 class Entity extends TypedMap<string, Value> {
+
+  getAddress(key: string): Address {
+    return this.get(key).toAddress()
+  }
+
+  getBoolean(key: string): boolean {
+    return this.get(key).toBoolean()
+  }
+
+  getBigInt(key: string): BigInt {
+    return this.get(key).toBigInt()
+  }
+
+  getBytes(key: string): Bytes {
+    return this.get(key).toBytes()
+  }
+
+  getU32(key: string): u32 {
+    return this.get(key).toU32()
+  }
+
+  getString(key: string): string {
+    return this.get(key).toString()
+  }
+
+  getArray<T>(key: string): Array<T> {
+    return this.get(key).toArray()
+  }
+
   setString(key: string, value: string): void {
     this.set(key, Value.fromString(value))
   }
@@ -562,6 +634,10 @@ class Entity extends TypedMap<string, Value> {
 
   setU256(key: string, value: U256): void {
     this.set(key, Value.fromU256(value))
+  }
+
+  setArray<T>(key: string, array: Array<T>): void {
+    this.set(key, Value.fromArray(array))
   }
 
   unset(key: string): void {
