@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { actions } from "redux-saga-web3";
+import { connect } from "react-redux";
+import { compose, lifecycle } from "recompose";
+
 import './App.css';
 
 class App extends Component {
@@ -32,4 +36,20 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  getAccounts: () => dispatch(actions.accounts.getRequest()),
+  getLatestBlock: () => dispatch(actions.blocks.getBlockHeader("latest"))
+});
+
+export default compose(
+  connect(
+    () => ({}),
+    mapDispatchToProps
+  ),
+  lifecycle({
+    componentDidMount() {
+      this.props.getAccounts();
+      this.props.getLatestBlock();
+    }
+  })
+)(App);
