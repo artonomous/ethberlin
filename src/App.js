@@ -16,7 +16,7 @@ import AboutContent from "./components/AboutContent";
 import Generators from "./Generators";
 import HomeContainer from "./containers/HomeContainer";
 
-import withLoading from "./utils/withLoading";
+import withMainLoading from "./utils/withMainLoading";
 
 class App extends Component {
   render() {
@@ -73,7 +73,7 @@ export default compose(
       this.props.getArtonomous();
     }
   }),
-  withLoading(({ accounts, artonomousInfo }) => {
+  withMainLoading(({ accounts, artonomousInfo }) => {
     return !accounts || !accounts.get("items") || !artonomousInfo.get("value");
   })
 )(App);
