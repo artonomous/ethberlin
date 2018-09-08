@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import AceEditor from "react-ace";
-import P5Wrapper from "./components/P5Wrapper";
+import P5Sandbox from "./components/P5Sandbox";
 import ReactModal from "react-modal";
-import BondingModal from "./components/BondingModal";
 
 import "brace/mode/javascript";
 import "brace/theme/github";
@@ -58,23 +57,10 @@ function draw() {
       // });
     });
   };
-<<<<<<< HEAD
   handleModalClose = evt => {};
   publishCreation = evt => {
     evt.preventDefault();
   };
-=======
-
-  componentDidUpdate(prevProps, prevState) {
-    try {
-          eval(this.state.code); 
-    } catch (e) {
-      if (e instanceof SyntaxError) {
-        //noop
-      }
-    }
-  }
->>>>>>> 6dd1d7571018d9e9768120cd2d747f321947e44e
 
   render() {
     const options = {
@@ -128,7 +114,7 @@ function draw() {
             }}
             className="preview"
           >
-            <P5Wrapper code={this.state.app} />
+            <P5Sandbox code={this.state.app} />
           </div>
         </div>
       </div>
