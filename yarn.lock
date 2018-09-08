@@ -12,6 +12,19 @@
   version "10.9.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.9.4.tgz#0f4cb2dc7c1de6096055357f70179043c33e9897"
 
+"@types/prop-types@*":
+  version "15.5.5"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.5.tgz#17038dd322c2325f5da650a94d5f9974943625e3"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*":
+  version "16.4.13"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.13.tgz#1385f5dc3486aa493849a32ccce626a817543e28"
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -1542,6 +1555,10 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.2.3:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+
 clean-css@4.2.x:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.1.tgz#2d411ef76b8569b6d0c84068dabe85b0aa5e5c17"
@@ -1712,6 +1729,12 @@ configstore@^3.0.0:
 connect-history-api-fallback@^1.3.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/connect-history-api-fallback/-/connect-history-api-fallback-1.5.0.tgz#b06873934bc5e344fef611a196a6faae0aee015a"
+
+connected-react-router-immutable@2.0.0-alpha.6:
+  version "2.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/connected-react-router-immutable/-/connected-react-router-immutable-2.0.0-alpha.6.tgz#fab33c5fb30a13a27380c892283bf77fe7ef8d77"
+  dependencies:
+    react-router "^4.0.0-alpha"
 
 connected-react-router@^4.4.1:
   version "4.4.1"
@@ -1973,6 +1996,10 @@ cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0":
   resolved "https://registry.yarnpkg.com/cssstyle/-/cssstyle-0.2.37.tgz#541097234cb2513c83ceed3acddc27ff27987d54"
   dependencies:
     cssom "0.3.x"
+
+csstype@^2.2.0:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.5.6.tgz#2ae1db2319642d8b80a668d2d025c6196071e788"
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -4672,6 +4699,10 @@ loader-utils@^1.0.2, loader-utils@^1.1.0:
     emojis-list "^2.0.0"
     json5 "^0.5.0"
 
+loaders.css@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/loaders.css/-/loaders.css-0.1.2.tgz#3a9fb43726c73334a38142af9d0629019b658743"
+
 locate-path@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
@@ -4995,6 +5026,10 @@ mkdirp@*, mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0
 mock-fs@^4.1.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/mock-fs/-/mock-fs-4.6.0.tgz#d944ef4c3e03ceb4e8332b4b31b8ac254051c8ae"
+
+monaco-editor@^0.14.2:
+  version "0.14.3"
+  resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.14.3.tgz#7cc4a4096a3821f52fea9b10489b527ef3034e22"
 
 mout@^0.11.0:
   version "0.11.1"
@@ -5427,6 +5462,10 @@ p-timeout@^1.1.1:
 p-try@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
+
+p5@0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/p5/-/p5-0.7.2.tgz#16255ebf50632f25ffd27b41f4ef7c6c1ffdb94c"
 
 package-json@^4.0.0:
   version "4.0.1"
@@ -5966,7 +6005,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   dependencies:
@@ -6174,6 +6213,14 @@ react-modal@^3.5.1:
     react-lifecycles-compat "^3.0.0"
     warning "^3.0.0"
 
+react-monaco-editor@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/react-monaco-editor/-/react-monaco-editor-0.18.0.tgz#098d847733667905aee80a0cd2473e80ab7b1302"
+  dependencies:
+    "@types/react" "*"
+    monaco-editor "^0.14.2"
+    prop-types "^15.6.2"
+
 react-redux@^5.0.7:
   version "5.0.7"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.7.tgz#0dc1076d9afb4670f993ffaef44b8f8c1155a4c8"
@@ -6196,7 +6243,7 @@ react-router-dom@^4.3.1:
     react-router "^4.3.1"
     warning "^4.0.1"
 
-react-router@^4.3.1:
+react-router@^4.0.0-alpha, react-router@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.3.1.tgz#aada4aef14c809cb2e686b05cee4742234506c4e"
   dependencies:
@@ -6252,6 +6299,15 @@ react-scripts@1.1.5:
     whatwg-fetch "2.0.3"
   optionalDependencies:
     fsevents "^1.1.3"
+
+react-spinkit@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-spinkit/-/react-spinkit-3.0.0.tgz#31fdaf4e18177766c57d1b1f3330290f8492a85a"
+  dependencies:
+    classnames "^2.2.3"
+    loaders.css "^0.1.2"
+    object-assign "^4.1.0"
+    prop-types "^15.5.8"
 
 react@^16.5.0:
   version "16.5.0"
