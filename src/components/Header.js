@@ -50,6 +50,9 @@ class Header extends React.Component {
               <Link className="color-soul" to="/">
                 Home
               </Link>
+              <Link className="color-soul" to="/about">
+                About
+              </Link>
               <Link className="color-soul" to="/generators">
                 Generators
               </Link>

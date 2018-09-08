@@ -9,6 +9,10 @@ body {
   min-height: 100%;
 }
 
+.textcontent {
+  padding: 20px;
+}
+
 .wrapper {
   min-height: calc(100vh - 6em);
   flex: 1;

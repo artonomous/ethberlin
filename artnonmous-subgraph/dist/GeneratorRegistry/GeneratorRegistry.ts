@@ -862,6 +862,7 @@ export function handleRegistryEntryEVT(event: RegistryEntryEVT): void {
         entity.setString('name', entryData.value0)
         entity.setString('creator', entryData.value1.toHex());
         entity.setString('token', entryData.value3.toHex());
+        entity.setString('__typename', 'Generator');
         store.set('Generator', registryEntryAddress.toHex(), entity);
     }
 }

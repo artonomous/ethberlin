@@ -12,6 +12,7 @@ import {
 import HeaderContainer from "./containers/HeaderContainer";
 import Footer from "./components/Footer";
 import CreateGenerator from "./CreateGenerator";
+import AboutContent from "./components/AboutContent";
 import Generators from "./Generators";
 import HomeContainer from "./containers/HomeContainer";
 
@@ -40,11 +41,8 @@ class App extends Component {
           component={Generators}
           generatorRegistry={generatorRegistry}
         />
-        <Route
-          exact
-          path="/generators/create"
-          component={CreateGenerator}
-        />
+        <Route exact path="/generators/create" component={CreateGenerator} />
+        <Route exact path="/about" component={AboutContent} />
         <Footer />
       </div>
     );

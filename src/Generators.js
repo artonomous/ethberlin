@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ReactModal from "react-modal";
 import BondingModal from "./components/BondingModal";
+import { Query } from "react-apollo";
+import gql from "graphql-tag";
 
 import "./Generators.css";
 
@@ -26,7 +28,7 @@ class Generators extends React.Component {
     };
   };
 
-  generateRow(...args) {
+  generateRow(args) {
     const customStyles = {
       content: {
         top: "50%",
@@ -40,25 +42,25 @@ class Generators extends React.Component {
       }
     };
 
-    const [i, currentRank, name, currentStake, bond, address] = args;
+    const { id, token, creator, sourceUri } = args;
     return (
-      <div className="row" key={i}>
-        <div className="column currentRank">{currentRank}</div>
-        <div className="column name">{name}</div>
-        <div className="column currentStake">{currentStake}</div>
+      <div className="row" key={id}>
+        <div className="column currentRank">{id}</div>
+        <div className="column name">{token}</div>
+        <div className="column currentStake">{sourceUri}</div>
         <div className="column">
           <div
-            onClick={this.handleModalOpen(i)}
+            onClick={this.handleModalOpen(id)}
             className="button bond-button background-color-soul"
           >
-            {bond}
+            {id}
           </div>
           <ReactModal
-            isOpen={this.state.modals[i]}
-            onRequestClose={this.handleModalClose(i)}
+            isOpen={this.state.modals[id]}
+            onRequestClose={this.handleModalClose(id)}
             style={customStyles}
           >
-            <BondingModal generator={address} />
+            <BondingModal generator={creator} />
           </ReactModal>
         </div>
       </div>
@@ -66,34 +68,6 @@ class Generators extends React.Component {
   }
 
   render() {
-    const generators = [
-      {
-        name: "generator",
-        currentStake: "100 ETH",
-        currentRank: 1,
-        bond: "Bond",
-        address: "2asdfkj"
-      },
-      {
-        name: "generator2",
-        currentStake: "2ETH",
-        currentRank: 2,
-        bond: "Bond",
-        address: "2asdsdfkjdslf"
-      }
-    ];
-
-    for (let i = 0; i < generators.length; i++) {
-      generators[i] = this.generateRow(
-        i,
-        generators[i].currentRank,
-        generators[i].name,
-        generators[i].currentStake,
-        generators[i].bond,
-        generators[i].address
-      );
-    }
-
     return (
       <div>
         <Link
@@ -102,7 +76,30 @@ class Generators extends React.Component {
         >
           Create generator
         </Link>
-        <div className="table">{generators}</div>
+        <Query
+          query={gql`
+            {
+              generators(first: 10) {
+                id
+                creator
+                sourceUri
+                token
+              }
+            }
+          `}
+        >
+          {({ loading, error, data }) => (
+            <span>
+              {!loading && (
+                <div className="table">
+                  {data.generators.map(generator =>
+                    this.generateRow(generator)
+                  )}
+                </div>
+              )}
+            </span>
+          )}
+        </Query>
       </div>
     );
   }

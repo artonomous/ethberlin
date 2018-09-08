@@ -5,4 +5,5 @@ type Generator @entity {
     creator: String
     sourceUri: String
     token: String
+    __typename: String
 }
