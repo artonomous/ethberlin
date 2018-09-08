@@ -44,13 +44,13 @@ class Generators extends React.Component {
     const [i, currentRank, name, currentStake, bond, address] = args;
     return (
       <div className="row" key={i}>
-        <div className="column">
+        <div className="column currentRank">
           {currentRank}
         </div>
-        <div className="column">
+        <div className="column name">
           {name}
         </div>
-        <div className="column">
+        <div className="column currentStake">
           {currentStake}
         </div>
         <div className="column">
