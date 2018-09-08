@@ -6,7 +6,8 @@ body {
 
 .root {
   text-align: center;
-  min-height: 100%;
+  flex: 1;
+  display: flex;
 }
 
 .textcontent {
@@ -14,7 +15,7 @@ body {
 }
 
 .wrapper {
-  min-height: calc(100vh - 6em);
+  min-height: calc(100vh);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -29,6 +30,14 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 3em;
+  width: 100%;
+}
+
+.piece-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .root h1 {
@@ -46,25 +55,36 @@ body {
   text-align: left;
   margin-top: 30px;
   width: 65%;
+  max-height: 100px;
 }
 
 .art-info .price,
 .art-info .timeleft,
+.art-info .last-bidder {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
 .art-info .generator {
+  width: 350px;
+  margin-left: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 2em;
   font-weight: bolder;
 }
 
 .art-info .timeleft {
-  flex: 1;
-  margin: 0 12%;
+  min-width: 300px;
+  flex-basis: 300px;
+  margin: 0 8%;
 }
 
 .art-info .price::before,
 .art-info .timeleft::before,
-.art-info .generator::before {
-  margin-bottom: 4px;
-  padding-bottom: 4px;
+.art-info .generator::before,
+.art-info .last-bidder:before {
   font-size: 0.5em;
   display: block;
   border-bottom: 1px dotted black;
@@ -72,6 +92,10 @@ body {
 
 .art-info .price::before {
   content: "Price";
+}
+
+.art-info .last-bidder::before {
+  content: "Last Bidder";
 }
 
 .art-info .price-unit {
@@ -90,7 +114,6 @@ body {
   width: 40%;
   margin-left: 10%;
   font-size: 3em;
-  margin-top: 1em;
   border: none;
   outline: none;
   background-color: #fafafa;
@@ -99,7 +122,7 @@ body {
 .bid-button {
   margin-left: 1em;
   margin-right: 1em;
-  font-size: 2.5em;
+  font-size: 1.5em;
   text-align: center;
 }
 

@@ -10,6 +10,7 @@
     "react": "^16.5.0",
     "react-apollo": "2.1.11",
     "react-blockies": "^1.3.0",
+    "react-countdown-now": "^1.3.0",
     "react-dom": "^16.5.0",
     "react-modal": "^3.5.1",
     "react-monaco-editor": "0.18.0",

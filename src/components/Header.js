@@ -58,6 +58,9 @@ class Header extends React.Component {
               <Link className="color-soul" to="/generators">
                 Generators
               </Link>
+              <Link className="color-soul" to="/historical">
+                History
+              </Link>
             </div>
           </div>
         </div>

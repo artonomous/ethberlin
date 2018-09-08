@@ -5,6 +5,7 @@ import { saga as ArtonomousSaga } from "../contracts/Artonomous";
 import { saga as SoulTokenSaga } from "../contracts/SoulToken";
 import { saga as AuctionHouseSaga } from "../contracts/AuctionHouse";
 import { saga as GeneratorRegistrySaga } from "../contracts/GeneratorRegistry";
+import { saga as ArtPieceTokenSaga } from "../contracts/ArtPieceToken";
 
 export default function* root() {
   yield all([
@@ -12,6 +13,7 @@ export default function* root() {
     fork(ArtonomousSaga),
     fork(AuctionHouseSaga),
     fork(GeneratorRegistrySaga),
-    fork(SoulTokenSaga)
+    fork(SoulTokenSaga),
+    fork(ArtPieceTokenSaga)
   ]);
 }
