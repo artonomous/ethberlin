@@ -9,12 +9,10 @@ import {
   selectors as artonomousSelectors
 } from "./contracts/Artonomous";
 
-import "./App.css";
-
 import HeaderContainer from "./containers/HeaderContainer";
 import Footer from "./components/Footer";
 import Generators from "./Generators";
-import Home from "./Home";
+import HomeContainer from "./containers/HomeContainer";
 
 import withLoading from "./utils/withLoading";
 
@@ -30,7 +28,11 @@ class App extends Component {
     return (
       <div className="wrapper">
         <HeaderContainer soulToken={soulToken} />
-        <Route exact path="/" component={Home} auctionHouse={auctionHouse} />
+        <Route
+          exact
+          path="/"
+          render={() => <HomeContainer auctionHouse={auctionHouse} />}
+        />
         <Route
           exact
           path="/generators"

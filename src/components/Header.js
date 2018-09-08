@@ -101,9 +101,9 @@ class Header extends React.Component {
         <div className="right">
           {/* <span className="network">Network: {this.state.network}</span>
           <span className="ether">{this.state.balance} ETH</span> */}
-          <span className="button buy-ether" onClick={this.handleModalEthOpen}>
+          {/* <span className="button buy-ether" onClick={this.handleModalEthOpen}>
             Buy/Sell ETH
-          </span>
+          </span> */}
           <ReactModal
             isOpen={this.state.showEthModal}
             onRequestClose={this.handleModalEthClose}

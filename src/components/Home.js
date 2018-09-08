@@ -3,7 +3,7 @@ import { actions } from "redux-saga-web3";
 import { connect } from "react-redux";
 import { compose, lifecycle } from "recompose";
 
-import "./App.css";
+import "./Home.css";
 
 class Home extends Component {
   render() {

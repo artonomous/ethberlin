@@ -55,6 +55,10 @@ contract AuctionHouse is Ownable {
   }
 
   function getCurrentPrice() public view returns (uint256) {
+    if (auction.endTime == 0) {
+      return 0;
+    }
+
     uint256 startTime = auction.endTime - AUCTION_LENGTH;
     uint256 elapsed = now - startTime;
 
