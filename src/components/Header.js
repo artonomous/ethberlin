@@ -1,6 +1,7 @@
 import React from 'react';
 import Blockies from 'react-blockies';
 import ReactModal from 'react-modal';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 import PurchaseModal from './PurchaseModal';
@@ -16,8 +17,16 @@ class Header extends React.Component {
     this.setState({ showEthModal: true });
   }
 
+  handleModalEthClose = () => {
+    this.setState({ showEthModal: false });
+  }
+
   handleModalSoulOpen = () => {
     this.setState({ showSoulModal: true });
+  }
+
+  handleModalSoulClose = () => {
+    this.setState({ showSoulModal: false });
   }
 
   render() {
@@ -49,12 +58,13 @@ class Header extends React.Component {
                 />
               </div>
               <div className="network-info">
-                <span className="address">30x054188d35...e2a4a15913504ecfc15a9</span>
-                <span className="network">Network: Mainnet</span>
+                <Link to="/">Home</Link>
+                <Link to="/generators">Generators</Link>
               </div>
             </div>
           </div>
           <div className="right">
+            <span className="network">Network: Mainnet</span>
             <span className="ether">0.2 ETH</span>
             <span
               className="button buy-ether"
@@ -63,6 +73,7 @@ class Header extends React.Component {
             </span>
             <ReactModal 
               isOpen={this.state.showEthModal}
+              onRequestClose={this.handleModalEthClose}
               style={customStyles}
             >
               <PurchaseModal token="ETH" /> 
@@ -74,6 +85,7 @@ class Header extends React.Component {
               Buy/Sell SOUL</span>
             <ReactModal 
               isOpen={this.state.showSoulModal}
+              onRequestClose={this.handleModalSoulClose}
               style={customStyles}
             >
               <PurchaseModal token="SOUL" /> 

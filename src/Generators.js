@@ -12,11 +12,10 @@ class Generators extends React.Component {
           {args[1]}
         </div>
         <div className="column">
-          current rank
           {args[2]}
         </div>
         <div className="column">
-          <button>{args[3]}</button>
+          <div className="button bond-button">{args[3]}</div>
         </div>
       </div>
     );
@@ -28,21 +27,21 @@ class Generators extends React.Component {
         name: 'generator', 
         currentStake: '100 ETH', 
         currentRank: 1, 
-        bond: 'https://link.com'
+        bond: 'Bond'
       },
       {
         name: 'generator2', 
         currentStake: '2ETH', 
-        currentRank: 1, 
-        bond: 'https://link.com'
+        currentRank: 2, 
+        bond: 'Bond'
       }
     ];
 
     for (let i = 0; i < generators.length; i++) {
       generators[i] = this.generateRow(
+          generators[i].currentRank,
           generators[i].name,
           generators[i].currentStake,
-          generators[i].currentRank,
           generators[i].bond
       )
     }
