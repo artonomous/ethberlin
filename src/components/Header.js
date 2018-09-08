@@ -39,7 +39,7 @@ class Header extends React.Component {
         marginRight           : '-30%',
         transform             : 'translate(-50%, -50%)',
         height                : '60%',
-        width                 : '40%',
+        width                 : '35%',
       }
     };
 
