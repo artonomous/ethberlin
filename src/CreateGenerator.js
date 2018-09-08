@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import brace from "brace";
 import AceEditor from "react-ace";
 import P5Wrapper from "./components/P5Wrapper";
+import ReactModal from "react-modal";
+import BondingModal from "./components/BondingModal";
 
 import "brace/mode/javascript";
 import "brace/theme/github";
@@ -51,17 +52,35 @@ function draw() {
     this.setState({ isProcessing: true });
 
     fsapi.createFileFromData(this.state.code).then(result => {
-      fsapi.getTextFileFromPath(result[0].hash).then(fileOut => {
-        console.log("has file from system", fileOut);
-      });
+      this.setState({ fileResult: result });
+      // fsapi.getTextFileFromPath(result[0].hash).then(fileOut => {
+      //   console.log("has file from system", fileOut);
+      // });
     });
   };
+  handleModalClose = evt => {};
+  publishCreation = evt => {
+    evt.preventDefault();
+  };
+
   render() {
     const options = {
       selectOnLineNumbers: true
     };
     return (
       <div>
+        <ReactModal
+          isOpen={this.state.isProcessing}
+          onRequestClose={this.handleModalClose}
+        >
+          <h1>Publish your creation!</h1>
+          <button
+            className="button background-color-soul button-large"
+            onClick={this.publishCreation}
+          >
+            Publish!
+          </button>
+        </ReactModal>
         <div className="actionBar">
           <h3>Submit a generative work</h3>
           <a
