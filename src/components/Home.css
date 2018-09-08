@@ -6,7 +6,7 @@ body {
 
 .root {
   text-align: center;
-  min-height: 100%;
+  flex: 1;
 }
 
 .textcontent {
@@ -14,7 +14,7 @@ body {
 }
 
 .wrapper {
-  min-height: calc(100vh - 6em);
+  min-height: calc(100vh);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -65,9 +65,15 @@ body {
   font-weight:bolder;
 }
 
+.art-info .timeleft {
+  min-width: 300px;
+  flex-basis: 300px;
+  margin: 0 8%;
+}
+
 
 .art-info .price::before,
-.art-info .timeleft::before, 
+.art-info .timeleft::before,
 .art-info .generator::before,
 .art-info .last-bidder:before {
   font-size: 0.5em;
@@ -107,7 +113,7 @@ body {
 .bid-button {
   margin-left: 1em;
   margin-right: 1em;
-  font-size: 2.5em;
+  font-size: 1.5em;
   text-align: center;
 }
 
