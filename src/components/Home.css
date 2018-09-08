@@ -66,7 +66,7 @@ body {
 }
 
 .art-info .generator {
-  width: 350px;
+  width: 300px;
   margin-left: 1em;
   white-space: nowrap;
   overflow: hidden;
@@ -79,6 +79,14 @@ body {
   min-width: 300px;
   flex-basis: 300px;
   margin: 0 8%;
+}
+
+.art-info .price {
+  width: 125px;
+}
+
+.art-info .button {
+  height: 30px;
 }
 
 .art-info .price::before,

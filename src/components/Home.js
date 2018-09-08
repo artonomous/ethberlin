@@ -35,7 +35,6 @@ class Home extends Component {
             </div>
             <div className="art-info">
               <div className="generator">{generatorAddress}</div>
-              <div className="last-bidder">Last bidder</div>
               <div className="timeleft">
                 <Countdown
                   date={new Date(endTime * 1000)}
