@@ -7,4 +7,6 @@ module.exports = async function(deployer) {
   deployer.deploy(GeneratorContract);
   const generator = await GeneratorContract.deployed();
   deployer.deploy(GeneratorFactory, registry.address, generator.address);
+  const generatorFactory = await GeneratorFactory.deployed();
+  await registry.setFactory(generatorFactory.address);
 };

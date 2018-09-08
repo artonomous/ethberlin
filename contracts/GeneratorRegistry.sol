@@ -2,9 +2,12 @@ pragma solidity ^0.4.24;
 
 import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 
+import "./GeneratorFactory.sol";
+
 contract GeneratorRegistry {
   event RegistryEntryEvent(address indexed registryEntry, bytes32 indexed eventType);
 
+  GeneratorFactory public factory;
   StandardToken public token;
   address[] generators;
 
@@ -14,6 +17,10 @@ contract GeneratorRegistry {
 
   function addGenerator(address _generator) public {
     generators.push(_generator);
+  }
+
+  function setFactory(GeneratorFactory _factory) public {
+    factory = _factory;
   }
 
   function fireRegistryEvent(bytes32 _eventType) public {
