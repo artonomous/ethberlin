@@ -1,0 +1,12 @@
+.table {
+}
+
+.row {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.row .column {
+  flex: 1 0 25%;
+  margin-top: 2em;
+}
