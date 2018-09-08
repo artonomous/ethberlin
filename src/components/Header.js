@@ -2,6 +2,8 @@ import React from "react";
 import Blockies from "react-blockies";
 import ReactModal from "react-modal";
 import { Link } from "react-router-dom";
+import web3 from "web3";
+
 import "./Header.css";
 
 import PurchaseModalContainer from "../containers/PurchaseModalContainer";
@@ -20,7 +22,7 @@ class Header extends React.Component {
   handleModalSoulClose = () => this.setState({ showPurchaseModal: false });
 
   render() {
-    const { accounts, soulToken } = this.props;
+    const { accounts, soulToken, soulTokenBalance } = this.props;
 
     const customStyles = {
       content: {
@@ -39,13 +41,13 @@ class Header extends React.Component {
       <div className="header color-text">
         <div className="left">
           <div className="blockies-container">
-            <div className="blockies">
+            {/* <div className="blockies">
               <Blockies
                 seed={accounts.getIn(["items", 0])}
                 size={10}
                 scale={3}
               />
-            </div>
+            </div> */}
             <div className="network-info">
               <Link className="color-soul" to="/">
                 Home
@@ -62,8 +64,9 @@ class Header extends React.Component {
         <div className="right">
           <span className="soul">
             {" "}
-            {this.props.soulTokenBalance &&
-              this.props.soulTokenBalance.get("value")}{" "}
+            {soulTokenBalance &&
+              soulTokenBalance.get("value") &&
+              web3.utils.fromWei(soulTokenBalance.get("value"))}{" "}
             SOUL
           </span>
           <span

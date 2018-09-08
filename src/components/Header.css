@@ -1,4 +1,3 @@
-
 .header {
   height: 3em;
   background-color: #202124;
@@ -31,18 +30,19 @@
 
 .blockies-container {
   display: flex;
+  align-items: center;
+  margin-left: 20px;
 }
 
-.network-info{
-  display: flex;
-  align-items: center;
+.blockies-container .identicon {
+  border-radius: 20px;
 }
 
 .button {
   border-radius: 0;
   border: 1px solid black;
   padding: 5px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   color: black;
   cursor: pointer;
 }
