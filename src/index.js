@@ -9,9 +9,9 @@ import Generators from './Generators';
 
 ReactDOM.render(
   <div>
-    <Header />
     <Router>
       <div>
+        <Header />
         <Route exact path="/" component={App} />
         <Route exact path="/generators" component={Generators} />
       </div>

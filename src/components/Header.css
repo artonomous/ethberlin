@@ -11,6 +11,11 @@
   padding-left: 1em;
 }
 
+.header a {
+  text-decoration: none;
+  color: #FF8A65;
+}
+
 .header .left * {
   margin-right: 1em;
 }
@@ -41,6 +46,10 @@
   background-color: #FAFAFA;
   color: black;
   cursor: pointer;
+}
+
+.button:hover {
+  filter: invert(100%);
 }
 
 .buy-soul {

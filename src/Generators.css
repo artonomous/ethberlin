@@ -1,12 +1,28 @@
 .table {
+  margin-top: 3em;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .row {
   display: flex; 
   flex-wrap: wrap;
+  border: 1px solid black;
+  margin-bottom: 1em;
+  box-shadow: 1px 3px 0px 0px rgba(0,0,0,0.75); 
 }
 
 .row .column {
-  flex: 1 0 25%;
-  margin-top: 2em;
+  flex: 1 0 15%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 5%;
+  font-size: 1.3em;
+}
+
+.bond-button {
+  float: right;
+  margin-right: 1em;
 }
