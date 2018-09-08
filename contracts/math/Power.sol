@@ -1,5 +1,4 @@
-pragma solidity ^0.4.18;
-
+pragma solidity ^0.4.24;
 
 /**
  * bancor formula by bancor
@@ -38,7 +37,7 @@ contract Power {
   */
   uint256[128] private maxExpArray;
 
-  function Power()  public {
+  constructor() public {
 //  maxExpArray[  0] = 0x6bffffffffffffffffffffffffffffffff;
 //  maxExpArray[  1] = 0x67ffffffffffffffffffffffffffffffff;
 //  maxExpArray[  2] = 0x637fffffffffffffffffffffffffffffff;

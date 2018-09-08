@@ -1,32 +1,46 @@
-.App {
+body {
+  font-family: 'Slabo 27px', serif;
+}
+
+.root {
   text-align: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.horizontal {
+  display: inline-block;
 }
 
-.title {
-  font-size: 4em;
-  font-weight: 300;
-  letter-spacing: 4px;
-}
-
-.intro {
-  min-height: 400px;
+.art-root {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 3em;
 }
 
-.thinglist {
+.art-piece {
+  width: 70%;
+  height: 70%;
+}
+
+.art-info {
+  flex: 1;
+}
+
+.timeleft {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.historical-pieces { 
   display: flex;
+  margin-top: 2em;
+  text-align: center;
 }
 
-.thinglist li {
-  list-style: none;
-  flex-grow: 1;
+.historical-pieces img {
+  width: 15em;
+  display: inline-block;
 }
+
+.box1, .box2, .box3 { min-width: 0 } /* See http://stackoverflow.com/q/26895349/ */
+.box1 { flex: 0 30%;} /* Initial width of 200, won't grow, can shrink if necessary */
+.box2 { flex: 30% } /* Initial width of 400, grows to fill available space, can shrink if necessary */
+.box3 { flex: 0 30% } /* Initial width of 400, won't grow, can shrink if necessary */

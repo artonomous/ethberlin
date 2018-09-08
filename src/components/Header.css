@@ -1,0 +1,58 @@
+.header {
+  height: 3em;
+  background-color: #202124;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.header .left {
+  width: 50%;
+  padding-left: 1em;
+}
+
+.header a {
+  text-decoration: none;
+  color: #FF8A65;
+}
+
+.header .left * {
+  margin-right: 1em;
+}
+
+.header .right {
+  width: 50%;
+  text-align: right;
+  padding-right: 1em;
+}
+
+.header .right * {
+  margin-right: 1em;
+}
+
+.blockies-container {
+  display: flex;
+}
+
+.network-info{
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  border-radius: 0;
+  border: 1px solid black;
+  padding: 5px;
+  background-color: #FAFAFA;
+  color: black;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: invert(100%);
+}
+
+.buy-soul {
+  background-color: #FF8A65;
+  cursor: pointer;
+}

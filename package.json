@@ -1,11 +1,13 @@
 {
-  "name": "ethberlin",
-  "version": "0.1.0",
-  "private": true,
   "dependencies": {
+    "pify": "^4.0.0",
     "react": "^16.5.0",
+    "react-blockies": "^1.3.0",
     "react-dom": "^16.5.0",
-    "react-scripts": "1.1.5"
+    "react-modal": "^3.5.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.5",
+    "zos-lib": "^1.4.1"
   },
   "scripts": {
     "start": "react-scripts start",

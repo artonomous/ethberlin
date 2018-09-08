@@ -11,7 +11,8 @@ import "./BancorFormula.sol";
  * https://github.com/bancorprotocol/contracts
  * https://github.com/ConsenSys/curationmarkets/blob/master/CurationMarkets.sol
  */
-contract EthBondingCurve is StandardToken, BancorFormula, Ownable {
+contract TokenBondingCurve is StandardToken, BancorFormula, Ownable {
+  StandardToken public reserveToken;
   uint256 public poolBalance;
 
   /*
@@ -34,25 +35,18 @@ contract EthBondingCurve is StandardToken, BancorFormula, Ownable {
   uint256 public gasPrice = 0 wei; // maximum gas price for bancor transactions
 
   /**
-   * @dev default function
-   * gas ~ 91645
-   */
-  function() public payable {
-    buy();
-  }
-
-  /**
    * @dev Buy tokens
    * gas ~ 77825
    * TODO implement maxAmount that helps prevent miner front-running
    */
-  function buy() validGasPrice public payable returns(bool) {
-    require(msg.value > 0);
+  function buy(uint numReserveTokens) validGasPrice public returns(bool) {
+    require(reserveToken.transferFrom(msg.sender, this, numReserveTokens));
+
     uint256 tokensToMint = calculatePurchaseReturn(totalSupply_, poolBalance, reserveRatio, msg.value);
     totalSupply_ = totalSupply_.add(tokensToMint);
     balances[msg.sender] = balances[msg.sender].add(tokensToMint);
-    poolBalance = poolBalance.add(msg.value);
-    emit LogMint(tokensToMint, msg.value);
+    poolBalance = poolBalance.add(numReserveTokens);
+    emit LogMint(tokensToMint, numReserveTokens);
     return true;
   }
 
@@ -64,12 +58,12 @@ contract EthBondingCurve is StandardToken, BancorFormula, Ownable {
    */
   function sell(uint256 sellAmount) validGasPrice public returns(bool) {
     require(sellAmount > 0 && balances[msg.sender] >= sellAmount);
-    uint256 ethAmount = calculateSaleReturn(totalSupply_, poolBalance, reserveRatio, sellAmount);
-    msg.sender.transfer(ethAmount);
-    poolBalance = poolBalance.sub(ethAmount);
+    uint256 reserveTokenAmount = calculateSaleReturn(totalSupply_, poolBalance, reserveRatio, sellAmount);
+    reserveToken.transfer(msg.sender, reserveTokenAmount);
+    poolBalance = poolBalance.sub(reserveTokenAmount);
     balances[msg.sender] = balances[msg.sender].sub(sellAmount);
     totalSupply_ = totalSupply_.sub(sellAmount);
-    emit LogWithdraw(sellAmount, ethAmount);
+    emit LogWithdraw(sellAmount, reserveTokenAmount);
     return true;
   }
 
