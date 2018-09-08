@@ -15,14 +15,20 @@ class P5Wrapper extends Component {
     }
   }
 
+  takePhoto() {
+    return new Promise(resolve => {
+      this.canvas.toBlob(blob => {
+        resolve(blob);
+      }, "image/png");
+    });
+  }
+
   componentWillUnmount() {
     this.canvas.remove();
   }
 
   render() {
-    return (
-      <div ref={wrapper => (this.wrapper = wrapper)} />
-    );
+    return <div ref={wrapper => (this.wrapper = wrapper)} />;
   }
 }
 

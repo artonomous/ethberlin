@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import brace from "brace";
 import AceEditor from "react-ace";
+import P5Wrapper from "./components/P5Wrapper";
 
 import "brace/mode/javascript";
 import "brace/theme/github";
@@ -25,17 +26,30 @@ class CreateGenerator extends React.Component {
 function draw() {
   background(220);
 }`,
+    app: `function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+}`,
     isProcessing: false
   };
   editorDidMount = (editor, monaco) => {};
   onChange = code => {
     this.setState({ code });
   };
-  submitContract = () => {
+  updatePreview = evt => {
+    this.setState({ app: this.state.code });
+    evt.preventDefault();
+  };
+  submitContract = evt => {
+    evt.preventDefault();
     if (this.state.isProcessing) {
       return;
     }
     this.setState({ isProcessing: true });
+
     fsapi.createFileFromData(this.state.code).then(result => {
       fsapi.getTextFileFromPath(result[0].hash).then(fileOut => {
         console.log("has file from system", fileOut);
@@ -82,7 +96,7 @@ function draw() {
             }}
             className="preview"
           >
-            <h2>canvas here</h2>
+            <P5Wrapper code={this.state.app} />
           </div>
         </div>
       </div>

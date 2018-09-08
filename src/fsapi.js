@@ -22,7 +22,7 @@ export function createFileFromData(data, path = "upload") {
       [
         {
           path: `${path}.p5js`,
-          content: Buffer.from(data)
+          content: typeof data === "string" ? Buffer.from(data) : data
         }
       ],
       (err, res) => {
