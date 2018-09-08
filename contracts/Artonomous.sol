@@ -29,6 +29,10 @@ contract Artonomous {
     emit Constructed(msg.sender);
   }
 
+  function getInfo() public view returns (address, address, address, address) {
+    return (auctionHouse, generatorRegistry, artPieceToken, soulToken);
+  }
+
   function startAuction() public {
     uint256 tokenId = block.number;
     Generator generator = generatorRegistry.getActiveGenerator();

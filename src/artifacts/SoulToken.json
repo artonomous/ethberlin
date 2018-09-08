@@ -575,14 +575,14 @@
     "absolutePath": "/Users/tarrence/code/crypto/ethberlin/contracts/tokens/SoulToken.sol",
     "exportedSymbols": {
       "SoulToken": [
-        2559
+        2577
       ]
     },
-    "id": 2560,
+    "id": 2578,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2530,
+        "id": 2548,
         "literals": [
           "solidity",
           "^",
@@ -595,10 +595,10 @@
       {
         "absolutePath": "/Users/tarrence/code/crypto/ethberlin/contracts/tokens/EthBondingCurve.sol",
         "file": "./EthBondingCurve.sol",
-        "id": 2531,
+        "id": 2549,
         "nodeType": "ImportDirective",
-        "scope": 2560,
-        "sourceUnit": 2484,
+        "scope": 2578,
+        "sourceUnit": 2502,
         "src": "26:31:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -609,55 +609,55 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2532,
+              "id": 2550,
               "name": "EthBondingCurve",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2483,
+              "referencedDeclaration": 2501,
               "src": "81:15:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_EthBondingCurve_$2483",
+                "typeIdentifier": "t_contract$_EthBondingCurve_$2501",
                 "typeString": "contract EthBondingCurve"
               }
             },
-            "id": 2533,
+            "id": 2551,
             "nodeType": "InheritanceSpecifier",
             "src": "81:15:10"
           }
         ],
         "contractDependencies": [
-          1983,
-          2275,
-          2483,
-          3025,
-          3121,
-          3198,
-          3230,
-          3477
+          2001,
+          2293,
+          2501,
+          3043,
+          3139,
+          3216,
+          3248,
+          3495
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2559,
+        "id": 2577,
         "linearizedBaseContracts": [
-          2559,
-          2483,
-          3025,
-          2275,
-          1983,
-          3477,
-          3121,
-          3198,
-          3230
+          2577,
+          2501,
+          3043,
+          2293,
+          2001,
+          3495,
+          3139,
+          3216,
+          3248
         ],
         "name": "SoulToken",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 2536,
+            "id": 2554,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 2559,
+            "scope": 2577,
             "src": "101:41:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -666,7 +666,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 2534,
+              "id": 2552,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "101:6:10",
@@ -678,7 +678,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "536f756c546f6b656e",
-              "id": 2535,
+              "id": 2553,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -697,10 +697,10 @@
           },
           {
             "constant": true,
-            "id": 2539,
+            "id": 2557,
             "name": "symbol",
             "nodeType": "VariableDeclaration",
-            "scope": 2559,
+            "scope": 2577,
             "src": "146:37:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -709,7 +709,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 2537,
+              "id": 2555,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "146:6:10",
@@ -721,7 +721,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "534f4c",
-              "id": 2538,
+              "id": 2556,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -740,10 +740,10 @@
           },
           {
             "constant": true,
-            "id": 2542,
+            "id": 2560,
             "name": "decimals",
             "nodeType": "VariableDeclaration",
-            "scope": 2559,
+            "scope": 2577,
             "src": "187:35:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -752,7 +752,7 @@
               "typeString": "uint8"
             },
             "typeName": {
-              "id": 2540,
+              "id": 2558,
               "name": "uint8",
               "nodeType": "ElementaryTypeName",
               "src": "187:5:10",
@@ -764,7 +764,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3138",
-              "id": 2541,
+              "id": 2559,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -783,25 +783,25 @@
           },
           {
             "body": {
-              "id": 2557,
+              "id": 2575,
               "nodeType": "Block",
               "src": "287:65:10",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2551,
+                    "id": 2569,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2549,
+                      "id": 2567,
                       "name": "reserveRatio",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2290,
+                      "referencedDeclaration": 2308,
                       "src": "293:12:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint32",
@@ -812,11 +812,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 2550,
+                      "id": 2568,
                       "name": "_reserveRatio",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2544,
+                      "referencedDeclaration": 2562,
                       "src": "308:13:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint32",
@@ -829,25 +829,25 @@
                       "typeString": "uint32"
                     }
                   },
-                  "id": 2552,
+                  "id": 2570,
                   "nodeType": "ExpressionStatement",
                   "src": "293:28:10"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2555,
+                    "id": 2573,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2553,
+                      "id": 2571,
                       "name": "gasPrice",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2293,
+                      "referencedDeclaration": 2311,
                       "src": "327:8:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -858,11 +858,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 2554,
+                      "id": 2572,
                       "name": "_gasPrice",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2546,
+                      "referencedDeclaration": 2564,
                       "src": "338:9:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -875,14 +875,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2556,
+                  "id": 2574,
                   "nodeType": "ExpressionStatement",
                   "src": "327:20:10"
                 }
               ]
             },
             "documentation": null,
-            "id": 2558,
+            "id": 2576,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -890,15 +890,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2547,
+              "id": 2565,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2544,
+                  "id": 2562,
                   "name": "_reserveRatio",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2558,
+                  "scope": 2576,
                   "src": "239:20:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -907,7 +907,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 2543,
+                    "id": 2561,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "239:6:10",
@@ -921,10 +921,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2546,
+                  "id": 2564,
                   "name": "_gasPrice",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2558,
+                  "scope": 2576,
                   "src": "261:17:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -933,7 +933,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2545,
+                    "id": 2563,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "261:7:10",
@@ -950,19 +950,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 2548,
+              "id": 2566,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "287:0:10"
             },
-            "scope": 2559,
+            "scope": 2577,
             "src": "227:125:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2560,
+        "scope": 2578,
         "src": "59:295:10"
       }
     ],
@@ -972,14 +972,14 @@
     "absolutePath": "/Users/tarrence/code/crypto/ethberlin/contracts/tokens/SoulToken.sol",
     "exportedSymbols": {
       "SoulToken": [
-        2559
+        2577
       ]
     },
-    "id": 2560,
+    "id": 2578,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2530,
+        "id": 2548,
         "literals": [
           "solidity",
           "^",
@@ -992,10 +992,10 @@
       {
         "absolutePath": "/Users/tarrence/code/crypto/ethberlin/contracts/tokens/EthBondingCurve.sol",
         "file": "./EthBondingCurve.sol",
-        "id": 2531,
+        "id": 2549,
         "nodeType": "ImportDirective",
-        "scope": 2560,
-        "sourceUnit": 2484,
+        "scope": 2578,
+        "sourceUnit": 2502,
         "src": "26:31:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1006,55 +1006,55 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2532,
+              "id": 2550,
               "name": "EthBondingCurve",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2483,
+              "referencedDeclaration": 2501,
               "src": "81:15:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_EthBondingCurve_$2483",
+                "typeIdentifier": "t_contract$_EthBondingCurve_$2501",
                 "typeString": "contract EthBondingCurve"
               }
             },
-            "id": 2533,
+            "id": 2551,
             "nodeType": "InheritanceSpecifier",
             "src": "81:15:10"
           }
         ],
         "contractDependencies": [
-          1983,
-          2275,
-          2483,
-          3025,
-          3121,
-          3198,
-          3230,
-          3477
+          2001,
+          2293,
+          2501,
+          3043,
+          3139,
+          3216,
+          3248,
+          3495
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2559,
+        "id": 2577,
         "linearizedBaseContracts": [
-          2559,
-          2483,
-          3025,
-          2275,
-          1983,
-          3477,
-          3121,
-          3198,
-          3230
+          2577,
+          2501,
+          3043,
+          2293,
+          2001,
+          3495,
+          3139,
+          3216,
+          3248
         ],
         "name": "SoulToken",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 2536,
+            "id": 2554,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 2559,
+            "scope": 2577,
             "src": "101:41:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1063,7 +1063,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 2534,
+              "id": 2552,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "101:6:10",
@@ -1075,7 +1075,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "536f756c546f6b656e",
-              "id": 2535,
+              "id": 2553,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1094,10 +1094,10 @@
           },
           {
             "constant": true,
-            "id": 2539,
+            "id": 2557,
             "name": "symbol",
             "nodeType": "VariableDeclaration",
-            "scope": 2559,
+            "scope": 2577,
             "src": "146:37:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1106,7 +1106,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 2537,
+              "id": 2555,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "146:6:10",
@@ -1118,7 +1118,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "534f4c",
-              "id": 2538,
+              "id": 2556,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1137,10 +1137,10 @@
           },
           {
             "constant": true,
-            "id": 2542,
+            "id": 2560,
             "name": "decimals",
             "nodeType": "VariableDeclaration",
-            "scope": 2559,
+            "scope": 2577,
             "src": "187:35:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1149,7 +1149,7 @@
               "typeString": "uint8"
             },
             "typeName": {
-              "id": 2540,
+              "id": 2558,
               "name": "uint8",
               "nodeType": "ElementaryTypeName",
               "src": "187:5:10",
@@ -1161,7 +1161,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3138",
-              "id": 2541,
+              "id": 2559,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1180,25 +1180,25 @@
           },
           {
             "body": {
-              "id": 2557,
+              "id": 2575,
               "nodeType": "Block",
               "src": "287:65:10",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2551,
+                    "id": 2569,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2549,
+                      "id": 2567,
                       "name": "reserveRatio",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2290,
+                      "referencedDeclaration": 2308,
                       "src": "293:12:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint32",
@@ -1209,11 +1209,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 2550,
+                      "id": 2568,
                       "name": "_reserveRatio",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2544,
+                      "referencedDeclaration": 2562,
                       "src": "308:13:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint32",
@@ -1226,25 +1226,25 @@
                       "typeString": "uint32"
                     }
                   },
-                  "id": 2552,
+                  "id": 2570,
                   "nodeType": "ExpressionStatement",
                   "src": "293:28:10"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2555,
+                    "id": 2573,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2553,
+                      "id": 2571,
                       "name": "gasPrice",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2293,
+                      "referencedDeclaration": 2311,
                       "src": "327:8:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1255,11 +1255,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 2554,
+                      "id": 2572,
                       "name": "_gasPrice",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2546,
+                      "referencedDeclaration": 2564,
                       "src": "338:9:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1272,14 +1272,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2556,
+                  "id": 2574,
                   "nodeType": "ExpressionStatement",
                   "src": "327:20:10"
                 }
               ]
             },
             "documentation": null,
-            "id": 2558,
+            "id": 2576,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -1287,15 +1287,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2547,
+              "id": 2565,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2544,
+                  "id": 2562,
                   "name": "_reserveRatio",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2558,
+                  "scope": 2576,
                   "src": "239:20:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1304,7 +1304,7 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 2543,
+                    "id": 2561,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
                     "src": "239:6:10",
@@ -1318,10 +1318,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2546,
+                  "id": 2564,
                   "name": "_gasPrice",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2558,
+                  "scope": 2576,
                   "src": "261:17:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1330,7 +1330,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2545,
+                    "id": 2563,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "261:7:10",
@@ -1347,19 +1347,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 2548,
+              "id": 2566,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "287:0:10"
             },
-            "scope": 2559,
+            "scope": 2577,
             "src": "227:125:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2560,
+        "scope": 2578,
         "src": "59:295:10"
       }
     ],
@@ -1390,5 +1390,5 @@
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-08T13:24:21.398Z"
+  "updatedAt": "2018-09-08T14:11:37.030Z"
 }
