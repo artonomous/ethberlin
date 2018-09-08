@@ -23,7 +23,7 @@ contract Generator is Initializable {
     creator = _creator;
     sourceUri = _sourceUri;
 
-    token = new GeneratorToken(name, "", 18, registry.getToken(), 666666, 20000000000);
+    token = new GeneratorToken(name, "", 18, registry.getToken());
     registry.fireRegistryEvent("constructed");
   }
 

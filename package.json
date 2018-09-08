@@ -27,6 +27,7 @@
     "redux-saga": "^0.16.0",
     "redux-saga-web3": "0.0.38",
     "redux-saga-web3-eth-contract": "0.0.39",
+    "truffle-privatekey-provider": "^0.1.0",
     "web3": "^1.0.0-beta.34",
     "zos-lib": "^1.4.1"
   },
