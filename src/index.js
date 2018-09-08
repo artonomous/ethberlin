@@ -8,6 +8,7 @@ import { client } from "./apollo";
 
 import createStore from "./store";
 import App from "./App";
+import Footer from "./components/Footer";
 
 import "./index.css";
 
@@ -19,7 +20,10 @@ ReactDOM.render(
   <ApolloProvider client={client}>
     <ReduxProvider store={store}>
       <ConnectedRouter history={history}>
-        <App />
+        <div>
+          <App />
+          <Footer />
+        </div>
       </ConnectedRouter>
     </ReduxProvider>
   </ApolloProvider>,

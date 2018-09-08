@@ -10,7 +10,6 @@ import {
 } from "./contracts/Artonomous";
 
 import HeaderContainer from "./containers/HeaderContainer";
-import Footer from "./components/Footer";
 import CreateGenerator from "./CreateGenerator";
 import AboutContent from "./components/AboutContent";
 import Generators from "./Generators";
@@ -51,7 +50,6 @@ class App extends Component {
           path="/historical"
           component={HistoricalPieces}
         />
-        <Footer />
       </div>
     );
   }
