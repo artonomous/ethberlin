@@ -3,14 +3,14 @@
 }
 
 .buy, .sell {
-  width: 40%;  
-  height: 40px;
+  width: 30%;
+  height: 30px;
   border: 1px solid black;
   align-items: center;
   display: flex;
   text-align: center;
   justify-content: center;
-  font-size: 1.4em;
+  font-size: 1.2em;
   cursor: pointer;
 }
 
@@ -34,7 +34,7 @@
 .purchase-info {
   display: flex;
   justify-content: center;
-  font-size: 3em;
+  font-size: 1.6em;
   margin-top: 3em;
   margin-bottom: 2.5em;
 }

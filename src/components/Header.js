@@ -4,69 +4,23 @@ import ReactModal from "react-modal";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-import PurchaseModal from "./PurchaseModal";
+import PurchaseModalContainer from "../containers/PurchaseModalContainer";
 import getWeb3 from "../utils/getWeb3";
 
 class Header extends React.Component {
   state = {
-    showEthModal: false,
-    showSoulModal: false,
+    showPurchaseModal: false,
     network: "Loading",
     address: "Loading",
     balance: "Loading"
   };
 
-  componentDidMount() {
-    this.getNetwork();
-    this.getBalance();
-  }
+  handleModalSoulOpen = () => this.setState({ showPurchaseModal: true });
 
-  handleModalEthOpen = () => {
-    this.setState({ showEthModal: true });
-  };
-
-  handleModalEthClose = () => {
-    this.setState({ showEthModal: false });
-  };
-
-  handleModalSoulOpen = () => {
-    this.setState({ showSoulModal: true });
-  };
-
-  handleModalSoulClose = () => {
-    this.setState({ showSoulModal: false });
-  };
-
-  getNetwork() {
-    getWeb3()
-      .then(web3 => {
-        return web3.eth.net.getNetworkType();
-      })
-      .then(network => {
-        if (network === "main") {
-          this.setState({ network: "Mainnet" });
-        } else {
-          this.setState({ network });
-        }
-      });
-  }
-
-  getBalance() {
-    getWeb3().then(web3 => {
-      web3.eth
-        .getAccounts()
-        .then(accounts => {
-          return web3.eth.getBalance(accounts[0]);
-        })
-        .then(balance => {
-          balance = (balance / 1000000000000000000).toFixed(2);
-          this.setState({ balance });
-        });
-    });
-  }
+  handleModalSoulClose = () => this.setState({ showPurchaseModal: false });
 
   render() {
-    const { accounts } = this.props;
+    const { accounts, soulToken } = this.props;
 
     const customStyles = {
       content: {
@@ -86,7 +40,11 @@ class Header extends React.Component {
         <div className="left">
           <div className="blockies-container">
             <div className="blockies">
-              <Blockies seed={accounts.getIn(["items", 0])} size={10} scale={3} />
+              <Blockies
+                seed={accounts.getIn(["items", 0])}
+                size={10}
+                scale={3}
+              />
             </div>
             <div className="network-info">
               <Link className="color-soul" to="/">
@@ -99,19 +57,12 @@ class Header extends React.Component {
           </div>
         </div>
         <div className="right">
-          {/* <span className="network">Network: {this.state.network}</span>
-          <span className="ether">{this.state.balance} ETH</span> */}
-          {/* <span className="button buy-ether" onClick={this.handleModalEthOpen}>
-            Buy/Sell ETH
-          </span> */}
-          <ReactModal
-            isOpen={this.state.showEthModal}
-            onRequestClose={this.handleModalEthClose}
-            style={customStyles}
-          >
-            <PurchaseModal token="ETH" />
-          </ReactModal>
-          <span className="soul"> {this.props.soulTokenBalance && this.props.soulTokenBalance.get("value")} SOUL</span>
+          <span className="soul">
+            {" "}
+            {this.props.soulTokenBalance &&
+              this.props.soulTokenBalance.get("value")}{" "}
+            SOUL
+          </span>
           <span
             className="button buy-soul background-color-soul"
             onClick={this.handleModalSoulOpen}
@@ -119,11 +70,11 @@ class Header extends React.Component {
             Buy/Sell SOUL
           </span>
           <ReactModal
-            isOpen={this.state.showSoulModal}
+            isOpen={this.state.showPurchaseModal}
             onRequestClose={this.handleModalSoulClose}
             style={customStyles}
           >
-            <PurchaseModal token="SOUL" />
+            <PurchaseModalContainer token="SOUL" soulToken={soulToken} />
           </ReactModal>
         </div>
       </div>

@@ -1,59 +1,51 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import ReactModal from 'react-modal';
-import './Generators.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import ReactModal from "react-modal";
+import BondingModal from "./components/BondingModal";
 
-import BondingModal from './components/BondingModal';
+import "./Generators.css";
 
 class Generators extends React.Component {
   state = {
     modals: {}
-  }
+  };
 
-
-  handleModalOpen = (id) => {
+  handleModalOpen = id => {
     return () => {
       let modals = this.state.modals;
       modals[id] = true;
       this.setState({ modals });
-    }
-  }
+    };
+  };
 
-  handleModalClose = (id) => {
+  handleModalClose = id => {
     return () => {
       let modals = this.state.modals;
       modals[id] = false;
       this.setState({ modals });
-    }
-  }
-
+    };
+  };
 
   generateRow(...args) {
     const customStyles = {
       content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-30%',
-        transform: 'translate(-50%, -50%)',
-        height: '60%',
-        width: '40%',
+        top: "50%",
+        left: "50%",
+        right: "auto",
+        bottom: "auto",
+        marginRight: "-30%",
+        transform: "translate(-50%, -50%)",
+        height: "60%",
+        width: "40%"
       }
     };
 
     const [i, currentRank, name, currentStake, bond, address] = args;
     return (
       <div className="row" key={i}>
-        <div className="column currentRank">
-          {currentRank}
-        </div>
-        <div className="column name">
-          {name}
-        </div>
-        <div className="column currentStake">
-          {currentStake}
-        </div>
+        <div className="column currentRank">{currentRank}</div>
+        <div className="column name">{name}</div>
+        <div className="column currentStake">{currentStake}</div>
         <div className="column">
           <div
             onClick={this.handleModalOpen(i)}
@@ -76,18 +68,18 @@ class Generators extends React.Component {
   render() {
     const generators = [
       {
-        name: 'generator',
-        currentStake: '100 ETH',
+        name: "generator",
+        currentStake: "100 ETH",
         currentRank: 1,
-        bond: 'Bond',
-        address: '2asdfkj'
+        bond: "Bond",
+        address: "2asdfkj"
       },
       {
-        name: 'generator2',
-        currentStake: '2ETH',
+        name: "generator2",
+        currentStake: "2ETH",
         currentRank: 2,
-        bond: 'Bond',
-        address: '2asdsdfkjdslf'
+        bond: "Bond",
+        address: "2asdsdfkjdslf"
       }
     ];
 
@@ -106,10 +98,11 @@ class Generators extends React.Component {
       <div>
         <Link
           className="button bond-button background-color-soul"
-          to="/generators/create">Create generator</Link>
-        <div className="table">
-          {generators}
-        </div>
+          to="/generators/create"
+        >
+          Create generator
+        </Link>
+        <div className="table">{generators}</div>
       </div>
     );
   }
