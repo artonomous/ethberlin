@@ -44,7 +44,7 @@ class Header extends React.Component {
     };
 
     return (
-        <div className='header'>
+        <div className='header color-text'>
           <div className="left">
             <div className="blockies-container">
               <div className="blockies">
@@ -58,8 +58,8 @@ class Header extends React.Component {
                 />
               </div>
               <div className="network-info">
-                <Link to="/">Home</Link>
-                <Link to="/generators">Generators</Link>
+                <Link className="color-soul" to="/">Home</Link>
+                <Link className="color-soul" to="/generators">Generators</Link>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@ class Header extends React.Component {
             </ReactModal>
             <span className="soul">0.2 SOUL</span>
             <span
-              className="button buy-soul"
+              className="button buy-soul background-color-soul"
               onClick={this.handleModalSoulOpen}>
               Buy/Sell SOUL</span>
             <ReactModal 

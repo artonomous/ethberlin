@@ -4,6 +4,4 @@ const ArtPieceToken = artifacts.require("./ArtPieceToken.sol");
 module.exports = async function(deployer) {
   const artPieceToken = await ArtPieceToken.deployed();
   deployer.deploy(AuctionHouse, artPieceToken.address);
-  const auctionHouse = await AuctionHouse.deployed();
-  artPieceToken.transferOwnership(auctionHouse.address);
 };

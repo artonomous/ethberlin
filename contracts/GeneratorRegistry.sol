@@ -17,7 +17,7 @@ contract GeneratorRegistry {
     token = _token;
   }
 
-  function getActiveGenerator() public view returns (address) {
+  function getActiveGenerator() public view returns (Generator) {
     return activeGenerator;
   }
 

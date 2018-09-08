@@ -32,7 +32,9 @@ class PurchaseModal extends React.Component {
           <input type="number" placeholder="0.00"/> 
           {this.props.token}
         </div>
-        <div className="button purchase-button-modal">{this.state.buy ? "Buy": "Sell"}</div>
+        <div className="button purchase-button-modal background-color-soul">
+          {this.state.buy ? "Buy": "Sell"}
+        </div>
       </div>
     );
   }

@@ -1,37 +1,50 @@
 const SoulToken = artifacts.require("SoulToken");
+const Artonomous = artifacts.require("Artonomous");
 const ArtPieceToken = artifacts.require("ArtPieceToken");
 const AuctionHouse = artifacts.require("AuctionHouse");
 const GeneratorRegistry = artifacts.require("GeneratorRegistry");
 const GeneratorFactory = artifacts.require("GeneratorFactory");
 const GeneratorContract = artifacts.require("Generator");
 
+const gasPrice = 1 * 1e18;
+const reserveRatio = Math.round(2 / 3 * 1000000) / 1000000;
+const ratio = Math.floor(reserveRatio * 1000000);
+
 contract("Artonomous", accounts => {
   let soulToken,
     artPieceToken,
     auctionHouse,
+    artonomous,
     generator,
     generatorRegistry,
     generatorFactory;
 
   beforeEach(async () => {
-    const token = await Artonomous.new();
+    artPieceToken = await ArtPieceToken.new("ArtPieceToken", "ART");
+    auctionHouse = await AuctionHouse.new(artPieceToken.address);
 
-    const AMOUNT = 50000000000000000000000;
-    await Promise.all(
-      accounts.map(account => {
-        console.log("Minting token " + token.address + " for " + account);
-        return token.mint(account, AMOUNT);
-      })
+    soulToken = await SoulToken.new(ratio, gasPrice);
+    generatorRegistry = await GeneratorRegistry.new(soulToken.address);
+    generator = await GeneratorContract.new();
+    generatorFactory = await GeneratorFactory.new(
+      generatorRegistry.address,
+      generator.address
     );
-    db = await EternalDb.new();
-    registry = await MemberRegistry.new();
-    staking = await Staking.new(token.address);
-    await registry.initialize(db.address, staking.address);
+    await generatorRegistry.setFactory(generatorFactory.address);
 
-    regEntryFac = await MemberEntryFactory.new(registry.address);
+    await generatorFactory.createGenerator("Generator!!", "generator_uri");
+
+    artonomous = await Artonomous.new(auctionHouse.address, generatorRegistry.address, artPieceToken.address, soulToken.address);
+
+    await artPieceToken.transferOwnership(artonomous.address);
+    await auctionHouse.transferOwnership(artonomous.address);
   });
 
-  describe("createRegistryEntry(bytes _data, uint256 deposit)", () => {
-    it("successfully creates and challenges entry", async () => {});
+  describe("startAuction()", () => {
+    it("successfully starts an auction", async () => {
+      await artonomous.startAuction();
+
+      assert.isTrue(false);
+    });
   });
 });
