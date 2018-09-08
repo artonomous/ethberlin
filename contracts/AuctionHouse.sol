@@ -29,7 +29,6 @@ contract AuctionHouse {
   // verifies that an auction is already in progress
   modifier canBuy() {
     require(auction.endTime != 0, "No auction in progress");
-    require(auction.endTime > now, "Auction is already over"); // solhint-disable-line not-rely-on-time
     require(msg.value >= getCurrentPrice(), "Not enough funds sent to purchase");
     _;
   }
@@ -43,6 +42,12 @@ contract AuctionHouse {
 
     pieceToken.transferFrom(this, msg.sender, auction.tokenId);
     delete auction;
+
+    // Claim art for free
+    if (auction.endTime > now) {
+      msg.sender.transfer(msg.value);
+      return;
+    }
 
     uint256 remainder = msg.value - price;
 
@@ -64,7 +69,6 @@ contract AuctionHouse {
       endTime: endTime, // solhint-disable-line not-rely-on-time
       startingPrice: startingPrice
     });
-
     emit Started(tokenId, startingPrice, endTime);
   }
 
@@ -73,14 +77,16 @@ contract AuctionHouse {
   }
 
   function getCurrentPrice() public view returns (uint256) {
+    uint256 startTime = auction.endTime - AUCTION_LENGTH;
+    uint256 elapsed = now - startTime;
     // Price decays linearly, reaching 0 at endTime
-    return getStartingPrice().sub(getStartingPrice().mul(now.div(auction.endTime)));
+    return getStartingPrice().sub(getStartingPrice().mul(elapsed).div(AUCTION_LENGTH));
   }
 
   function getAuction() public view returns (uint256, uint256, uint256) {
     return (
       auction.tokenId,
-      auction.startingPrice,
+      getCurrentPrice(),
       auction.endTime
     );
   }
