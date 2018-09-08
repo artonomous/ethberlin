@@ -58,23 +58,21 @@ function draw() {
       // });
     });
   };
-<<<<<<< HEAD
+
   handleModalClose = evt => {};
   publishCreation = evt => {
     evt.preventDefault();
   };
-=======
 
   componentDidUpdate(prevProps, prevState) {
     try {
-          eval(this.state.code); 
+      eval(this.state.code);
     } catch (e) {
       if (e instanceof SyntaxError) {
         //noop
       }
     }
   }
->>>>>>> 6dd1d7571018d9e9768120cd2d747f321947e44e
 
   render() {
     const options = {
