@@ -26,10 +26,20 @@ class PurchaseModal extends React.Component {
     return (
       <div className="modal">
         <div className="purchase-dialog">
-          <span onClick={this.setBuy} className="buy">
+          <span 
+            onClick={this.setBuy}
+            className="buy"
+            style={{'background-color': this.state.buy ? "black" : "white",
+                    'color': this.state.buy ? "white" : "black"}}
+          >
             Buy
           </span>
-          <span onClick={this.setSell} className="sell">
+          <span
+            onClick={this.setSell}
+            className="sell"
+            style={{'background-color': !this.state.buy ? "black" : "white",
+                    'color': !this.state.buy ? "white" : "black"}}
+          >
             Sell
           </span>
         </div>
@@ -43,12 +53,12 @@ class PurchaseModal extends React.Component {
           />
           {this.state.buy ? "ETH worth of SOUL" : "SOUL for ETH"}
         </div>
-        <button
+        <div
           className="button purchase-button-modal background-color-soul"
           onClick={this.state.buy ? () => buy(value) : () => sell(value)}
         >
           {this.state.buy ? "Buy" : "Sell"}
-        </button>
+        </div>
       </div>
     );
   }

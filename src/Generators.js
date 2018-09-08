@@ -92,7 +92,7 @@ class Generators extends React.Component {
             <span>
               {!loading && (
                 <div className="table">
-                  {data.generators.map(generator =>
+                  {data && data.generators && data.generators.map(generator =>
                     this.generateRow(generator)
                   )}
                 </div>
