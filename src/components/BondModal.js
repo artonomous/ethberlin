@@ -27,7 +27,22 @@ class BondModal extends React.Component {
     return (
       <div className="modal">
         <div className="purchase-dialog">
-          hello
+        </div>
+        <div className="purchase-info">
+          I want to bond
+          <input
+            type="number"
+            placeholder="0.00"
+            value={value}
+            onChange={this.setValue}
+          />
+          worth of SOUL
+        </div>
+        <div
+          className="button purchase-button-modal background-color-soul"
+          onClick={this.state.buy ? () => buy(value) : () => sell(value)}
+        >
+          Bond
         </div>
       </div>
     );
