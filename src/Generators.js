@@ -109,6 +109,8 @@ class Generators extends React.Component {
   render() {
     return (
       <div>
+        <br />
+        <br />
         <Link
           className="button background-color-soul large-go"
           to="/generators/create"
