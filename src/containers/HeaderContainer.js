@@ -18,10 +18,12 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-  getBalanceOf: address =>
+  getBalanceOf: address => {
+    console.log(props)
     dispatch(
       soulTokenActions.methods.balanceOf({ at: props.soulToken }).call(address)
     )
+  }
 });
 
 export default compose(
