@@ -29,7 +29,7 @@ class PurchaseModal extends React.Component {
           <span 
             onClick={this.setBuy}
             className="buy"
-            style={{'background-color': this.state.buy ? "black" : "white",
+            style={{'backgroundColor': this.state.buy ? "black" : "white",
                     'color': this.state.buy ? "white" : "black"}}
           >
             Buy
@@ -37,7 +37,7 @@ class PurchaseModal extends React.Component {
           <span
             onClick={this.setSell}
             className="sell"
-            style={{'background-color': !this.state.buy ? "black" : "white",
+            style={{'backgroundColor': !this.state.buy ? "black" : "white",
                     'color': !this.state.buy ? "white" : "black"}}
           >
             Sell

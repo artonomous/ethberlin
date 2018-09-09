@@ -38,6 +38,7 @@ class Header extends React.Component {
         width: "50%"
       }
     };
+    console.log(soulTokenBalance && typeof soulTokenBalance.get("value"))
 
     return (
       <div className="header color-text">
@@ -69,27 +70,7 @@ class Header extends React.Component {
         <div className="right">
           <span className="soul">
             {" "}
-            <Query
-              query={gql`
-                {
-                  soulTokens(id: ${accounts[0]}) {
-                    id
-                    owner
-                    balance
-                  }
-                }
-              `}
-            >
-              {({ loading, error, data }) => (
-                <span>
-                  {!loading &&
-                    data &&
-                    data.soulTokens &&
-                    data.soulTokens[0] &&
-                    web3.utils.fromWei(data.soulTokens[0].balance)}{" "}
-                </span>
-              )}
-            </Query>
+            {soulTokenBalance && soulTokenBalance.get("value") && web3.utils.fromWei(soulTokenBalance.get("value"))} 
             SOUL
           </span>
           <span
