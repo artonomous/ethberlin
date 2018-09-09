@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ReactModal from "react-modal";
 import RenderArtModal from "./components/RenderArtModal";
+import BondModal from "./components/BondModal";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 
@@ -11,22 +12,39 @@ ReactModal.defaultStyles.overlay.backgroundColor = "rgba(255,255,255,0.75)";
 
 class Generators extends React.Component {
   state = {
-    modals: {}
+    artModals: {},
+    bondModals: {}
   };
 
-  handleModalOpen = id => {
+  handleBondModalOpen = id => {
     return () => {
-      let modals = this.state.modals;
-      modals[id] = true;
-      this.setState({ modals });
+      let bondModals = this.state.bondModals;
+      bondModals[id] = true;
+      this.setState({ bondModals });
     };
   };
 
-  handleModalClose = id => {
+  handleBondModalClose = id => {
     return () => {
-      let modals = this.state.modals;
-      modals[id] = false;
-      this.setState({ modals });
+      let bondModals = this.state.bondModals;
+      bondModals[id] = false;
+      this.setState({ bondModals });
+    };
+  };
+
+  handleArtModalOpen = id => {
+    return () => {
+      let artModals = this.state.artModals;
+      artModals[id] = true;
+      this.setState({ artModals });
+    };
+  };
+
+  handleArtModalClose = id => {
+    return () => {
+      let artModals = this.state.artModals;
+      artModals[id] = false;
+      this.setState({ artModals });
     };
   };
 
@@ -55,17 +73,30 @@ class Generators extends React.Component {
         <div className="column currentStake">0.0</div>
         <div className="column">
           <div
-            onClick={this.handleModalOpen(id)}
+            onClick={this.handleArtModalOpen(id)}
             className="button bond-button background-color-soul"
           >
             [view]
           </div>
           <ReactModal
-            isOpen={this.state.modals[id]}
-            onRequestClose={this.handleModalClose(id)}
+            isOpen={this.state.artModals[id]}
+            onRequestClose={this.handleArtModalClose(id)}
             style={customStyles}
           >
             <RenderArtModal url={sourceUri} hash={id} />
+          </ReactModal>
+          <div
+            onClick={this.handleBondModalOpen(id)}
+            className="button bond-button background-color-soul"
+          >
+            [bond]
+          </div>
+          <ReactModal
+            isOpen={this.state.bondModals[id]}
+            onRequestClose={this.handleBondModalClose(id)}
+            style={customStyles}
+          >
+            <BondModal />
           </ReactModal>
         </div>
       </div>
