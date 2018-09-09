@@ -83,6 +83,9 @@ body {
 
 .art-info .price {
   width: 125px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .art-info .button {
