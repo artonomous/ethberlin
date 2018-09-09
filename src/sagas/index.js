@@ -6,6 +6,7 @@ import { saga as SoulTokenSaga } from "../contracts/SoulToken";
 import { saga as AuctionHouseSaga } from "../contracts/AuctionHouse";
 import { saga as GeneratorFactorySaga } from "../contracts/GeneratorFactory";
 import { saga as GeneratorRegistrySaga } from "../contracts/GeneratorRegistry";
+import { saga as GeneratorSaga } from "../contracts/Generator";
 import { saga as ArtPieceTokenSaga } from "../contracts/ArtPieceToken";
 
 export default function* root() {
@@ -15,6 +16,7 @@ export default function* root() {
     fork(AuctionHouseSaga),
     fork(GeneratorFactorySaga),
     fork(GeneratorRegistrySaga),
+    fork(GeneratorSaga),
     fork(SoulTokenSaga),
     fork(ArtPieceTokenSaga)
   ]);
