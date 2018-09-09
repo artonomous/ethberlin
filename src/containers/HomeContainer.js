@@ -8,35 +8,49 @@ import {
   selectors as auctionHouseSelectors
 } from "../contracts/AuctionHouse";
 
+import { actions as artonomousActions } from "../contracts/Artonomous";
+
 import {
   actions as artPieceTokenActions,
-  selectors as artPieceTokenSelectors 
+  selectors as artPieceTokenSelectors
 } from "../contracts/ArtPieceToken";
 
 import Home from "../components/Home";
 
 const mapStateToProps = (state, { auctionHouse, artPieceToken }) => ({
-  auction: auctionHouseSelectors.methods.getAuction(
-    { at: auctionHouse }
-  )(state),
+  auction: auctionHouseSelectors.methods.getAuction({ at: auctionHouse })(
+    state
+  ),
   router: state.get("router"),
-  generator: artPieceTokenSelectors.methods.getGenerator(
-    { at: artPieceToken }
-  )(state),
+  generator: artPieceTokenSelectors.methods.getGenerator({ at: artPieceToken })(
+    state
+  )
 });
 
 const mapDispatchToProps = (dispatch, { auctionHouse, artPieceToken }) => ({
   getAuction: () => {
     dispatch(
       auctionHouseActions.methods.getAuction({ at: auctionHouse }).call()
-    )
+    );
   },
-  getGenerator: (tokenId) => {
+  startAuction: () => {
+    dispatch(artonomousActions.methods.startAuction().send());
+  },
+  buyPiece: value => {
     dispatch(
-      artPieceTokenActions.methods.getGenerator({ at: artPieceToken }).call(
-        tokenId 
-      )
-    )
+      artonomousActions.methods
+        .buyPiece({
+          value
+        })
+        .send()
+    );
+  },
+  getGenerator: tokenId => {
+    dispatch(
+      artPieceTokenActions.methods
+        .getGenerator({ at: artPieceToken })
+        .call(tokenId)
+    );
   }
 });
 
@@ -57,5 +71,5 @@ export default compose(
     componentDidMount() {
       this.props.getGenerator(this.props.auction.get("value")[0]);
     }
-  }),
+  })
 )(Home);

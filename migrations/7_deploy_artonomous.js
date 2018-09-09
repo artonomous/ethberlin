@@ -20,7 +20,8 @@ module.exports = async function(deployer) {
       soulToken.address
     );
 
-    const artonomous = await Artonomous.deployed()
+    const artonomous = await Artonomous.deployed();
+    await auctionHouse.transferOwnership(artonomous.address);
     await artPieceToken.transferOwnership(artonomous.address);
   });
 };

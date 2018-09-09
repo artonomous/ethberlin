@@ -3,6 +3,7 @@ import Countdown from "react-countdown-now";
 import { actions } from "redux-saga-web3";
 import { connect } from "react-redux";
 import { compose, lifecycle } from "recompose";
+import web3 from "web3";
 
 import CountdownRenderer from "./CountdownRenderer";
 import LoadingLogo from "./LoadingLogo";
@@ -13,22 +14,19 @@ class Home extends Component {
   createAuction() {}
 
   render() {
-    //const tokenId = this.props.auction && this.props.auction.get("value") && this.props.auction.get("value")[0]
-    const currentPrice =
-      this.props.auction &&
-      this.props.auction.get("value") &&
-      this.props.auction.get("value")[1];
-    //const endTime = this.props.auction && this.props.auction.get("value") && this.props.auction.get("value")[2]
-    const tokenId = 1;
-    const endTime = 1536595438;
-    const generator = this.props.generator;
+    const { auction, generator, startAuction, buyPiece } = this.props;
+    const tokenId = auction.get("value")[0];
+    const currentPrice = auction.get("value")[1];
+    const endTime = auction.get("value")[2];
     const generatorAddress = generator && generator.getIn(["0", "value"]);
 
-    if (tokenId === "0") {
-      return <button onClick={this.createAuction}>Create Auction</button>;
-    } else {
-      return (
-        <div className="root">
+    return (
+      <div className="root">
+        {tokenId === "0" ? (
+          <div className="art-root">
+            <button onClick={startAuction}>Create Auction</button>
+          </div>
+        ) : (
           <div className="art-root">
             <div className="piece-container">
               <LoadingLogo className="art-piece" />
@@ -41,13 +39,20 @@ class Home extends Component {
                   renderer={CountdownRenderer}
                 />
               </div>
-              <div className="price">{currentPrice} ETH</div>
-              <div className="button bid-button background-color-soul">Buy</div>
+              <div className="price">
+                {currentPrice && web3.utils.fromWei(currentPrice)} ETH
+              </div>
+              <div
+                className="button bid-button background-color-soul"
+                onClick={() => buyPiece(currentPrice)}
+              >
+                Buy
+              </div>
             </div>
           </div>
-        </div>
-      );
-    }
+        )}
+      </div>
+    );
   }
 }
 
