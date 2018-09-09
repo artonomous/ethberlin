@@ -27,14 +27,16 @@
   margin-right: 1em;
 }
 
-.large-go {
-  margin-top: 8px;
+body .large-go {
+  padding-top: 30px;
+  position: relative;
+  margin-left: 20px;
   text-decoration: none;
   font-size: 0.9em;
   padding: 6px 4px;
 }
 
-.randomHex::before, .name::before, .currentStake::before {
+.randomHex::before, .name::before, .currentStake::before, .creator::before {
   font-size: 0.5em;
   display: block;
   border-bottom: 1px dashed black;
@@ -42,6 +44,10 @@
 
 .randomHex::before {
   content: "Address";
+}
+
+.creator::before {
+  content: "Creator";
 }
 
 .name::before {

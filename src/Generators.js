@@ -5,6 +5,7 @@ import RenderArtModal from "./components/RenderArtModal";
 import BondModal from "./components/BondModal";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
+import EmojiHashRenderer from "./components/EmojiHashRenderer";
 
 import "./Generators.css";
 
@@ -66,11 +67,13 @@ class Generators extends React.Component {
     const { id, token, name, creator, sourceUri } = args;
     return (
       <div className="row" key={id}>
-        <div className="column randomHex">
-          <div>{creator}</div>
+        <div className="column creator">
+          <EmojiHashRenderer hash={creator} />
         </div>
         <div className="column name">{name}</div>
-        <div className="column currentStake">0.0</div>
+        <div className="column currentStake">
+          {Math.floor(Math.random() * 30) / 10}
+        </div>
         <div className="column">
           <div
             onClick={this.handleArtModalOpen(id)}
@@ -106,6 +109,8 @@ class Generators extends React.Component {
   render() {
     return (
       <div>
+        <br />
+        <br />
         <Link
           className="button background-color-soul large-go"
           to="/generators/create"
