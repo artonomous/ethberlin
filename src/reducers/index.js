@@ -5,6 +5,7 @@ import { reducer as ArtonomousReducer } from "../contracts/Artonomous";
 import { reducer as SoulTokenReducer } from "../contracts/SoulToken";
 import { reducer as AuctionHouseReducer } from "../contracts/AuctionHouse";
 import { reducer as GeneratorRegistryReducer } from "../contracts/GeneratorRegistry";
+import { reducer as GeneratorReducer } from "../contracts/Generator";
 import { reducer as ArtPieceTokenReducer} from "../contracts/ArtPieceToken";
 
 const reducers = combineReducers({
@@ -13,6 +14,7 @@ const reducers = combineReducers({
   ...SoulTokenReducer,
   ...AuctionHouseReducer,
   ...GeneratorRegistryReducer,
+  ...GeneratorReducer,
   ...ArtPieceTokenReducer
 });
 
