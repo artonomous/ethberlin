@@ -28,14 +28,13 @@ class App extends Component {
       soulToken: null,
       offline: true
     };
-    try {
-      const value = artonomousInfo.get("value");
-      chainInfo.auctionHouse = value[0];
-      chainInfo.generatorRegistry = value[1];
-      chainInfo.artPieceToken = value[2];
-      chainInfo.oulToken = value[3];
-      chainInfo.offline = false;
-    } catch (e) {}
+
+    const value = artonomousInfo.get("value");
+    chainInfo.auctionHouse = value[0];
+    chainInfo.generatorRegistry = value[1];
+    chainInfo.artPieceToken = value[2];
+    chainInfo.soulToken = value[3];
+    chainInfo.offline = false;
 
     return (
       <div className="wrapper">
