@@ -21,35 +21,44 @@ import withMainLoading from "./utils/withMainLoading";
 class App extends Component {
   render() {
     const { artonomousInfo } = this.props;
-    const value = artonomousInfo.get("value");
-    const auctionHouse = value[0];
-    const generatorRegistry = value[1];
-    const artPieceToken = value[2];
-    const soulToken = value[3];
+    const chainInfo = {
+      auctionHouse: null,
+      generatorRegistry: null,
+      artPieceToken: null,
+      soulToken: null,
+      offline: true
+    };
+    try {
+      const value = artonomousInfo.get("value");
+      chainInfo.auctionHouse = value[0];
+      chainInfo.generatorRegistry = value[1];
+      chainInfo.artPieceToken = value[2];
+      chainInfo.oulToken = value[3];
+      chainInfo.offline = false;
+    } catch (e) {}
 
     return (
       <div className="wrapper">
-        <HeaderContainer soulToken={soulToken} />
+        <HeaderContainer soulToken={chainInfo.soulToken} />
         <Route
           exact
           path="/"
-          render={() => <HomeContainer
-                          artPieceToken={artPieceToken}
-                          auctionHouse={auctionHouse} />}
+          render={() => (
+            <HomeContainer
+              artPieceToken={chainInfo.artPieceToken}
+              auctionHouse={chainInfo.auctionHouse}
+            />
+          )}
         />
         <Route
           exact
           path="/generators"
           component={Generators}
-          generatorRegistry={generatorRegistry}
+          generatorRegistry={chainInfo.generatorRegistry}
         />
         <Route exact path="/generators/create" component={CreateGenerator} />
         <Route exact path="/about" component={AboutContent} />
-        <Route
-          exact
-          path="/historical"
-          component={HistoricalPieces}
-        />
+        <Route exact path="/historical" component={HistoricalPieces} />
       </div>
     );
   }

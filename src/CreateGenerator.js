@@ -27,7 +27,7 @@ function setup() {
 }
 
 function draw() {
-  background(random64.charAt(0)+random64.charAt(1)*5, random64.charAt(2)*2, 30);
+  background(random64.charCodeAt(0)+random64.charCodeAt(1)*5, random64.charCodeAt(2)*2, 30);
 }`,
     app: `const random64 = "$RANDOM_HASH";
     
@@ -36,7 +36,7 @@ function setup() {
 }
 
 function draw() {
-  background(random64.charAt(0)+random64.charAt(1)*5, random64.charAt(2)*2, 30);
+  background(random64.charCodeAt(0)+random64.charCodeAt(1)*5, random64.charCodeAt(2)*2, 30);
 }`,
     isProcessing: false
   };

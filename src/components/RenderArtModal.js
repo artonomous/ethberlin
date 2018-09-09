@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 import P5Sandbox from "./P5Sandbox";
 import * as fsapi from "../fsapi";
 
-class BondingModal extends React.Component {
+export default class RenderArtModal extends React.Component {
+  static propTypes = {
+    url: PropTypes.string
+  };
   state = {
     code: null
   };
@@ -29,9 +32,3 @@ class BondingModal extends React.Component {
     return <div>loading from ipfs...</div>;
   }
 }
-
-BondingModal.propTypes = {
-  url: PropTypes.string
-};
-
-export default BondingModal;
