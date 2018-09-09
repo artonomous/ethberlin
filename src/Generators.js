@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ReactModal from "react-modal";
-import BondingModal from "./components/BondingModal";
+import RenderArtModal from "./components/RenderArtModal";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 
 import "./Generators.css";
+
+ReactModal.defaultStyles.overlay.backgroundColor = "rgba(255,255,255,0.75)";
 
 class Generators extends React.Component {
   state = {
@@ -37,30 +39,33 @@ class Generators extends React.Component {
         bottom: "auto",
         marginRight: "-30%",
         transform: "translate(-50%, -50%)",
-        height: "60%",
-        width: "40%"
-      }
+        height: "500px",
+        width: "500px"
+      },
+      overlay: {}
     };
 
-    const { id, token, creator, sourceUri } = args;
+    const { id, token, name, creator, sourceUri } = args;
     return (
       <div className="row" key={id}>
-        <div className="column currentRank">{id}</div>
-        <div className="column name">{token}</div>
-        <div className="column currentStake">{sourceUri}</div>
+        <div className="column randomHex">
+          <div>{creator}</div>
+        </div>
+        <div className="column name">{name}</div>
+        <div className="column currentStake">0.0</div>
         <div className="column">
           <div
             onClick={this.handleModalOpen(id)}
             className="button bond-button background-color-soul"
           >
-            {id}
+            [view]
           </div>
           <ReactModal
             isOpen={this.state.modals[id]}
             onRequestClose={this.handleModalClose(id)}
             style={customStyles}
           >
-            <BondingModal generator={id} />
+            <RenderArtModal url={sourceUri} />
           </ReactModal>
         </div>
       </div>
@@ -71,7 +76,7 @@ class Generators extends React.Component {
     return (
       <div>
         <Link
-          className="button bond-button background-color-soul"
+          className="button background-color-soul large-go"
           to="/generators/create"
         >
           Create generator
@@ -81,6 +86,7 @@ class Generators extends React.Component {
             {
               generators(first: 10) {
                 id
+                name
                 creator
                 sourceUri
                 token

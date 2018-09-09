@@ -6,6 +6,7 @@ import hashToRandomSeed from "../hashToRandomSeed";
 import loopProtect from "loop-protect";
 import { JSHINT } from "jshint";
 import decomment from "decomment";
+import { sha3_256 } from "js-sha3";
 
 export default class P5Sandbox extends React.Component {
   static propTypes = {
@@ -18,7 +19,7 @@ export default class P5Sandbox extends React.Component {
 
   getHTML = () => {
     return `<!DOCTYPE html>
-    <html>
+    <html style="display: flex; align-items: center; justify-content: center; height: 100%;">
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,8 +29,7 @@ export default class P5Sandbox extends React.Component {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js"></script>
         <script>
-          randomSeed(${hashToRandomSeed(this.props.hash)});
-          ${this.props.code}
+          ${this.props.code.replace("$RANDOM_HASH", sha3_256(this.props.hash))}
         </script>
       </head>
       <body>
@@ -116,7 +116,7 @@ export default class P5Sandbox extends React.Component {
         ref={element => {
           this.iframeElement = element;
         }}
-        sandbox="allow-scripts allow-pointer-lock allow-same-origin allow-popups allow-forms allow-modals"
+        sandbox="allow-scripts allow-pointer-lock allow-same-origin allow-forms allow-modals"
       />
     );
   }

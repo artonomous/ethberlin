@@ -8,6 +8,7 @@
     "graphql": "14.0.2",
     "history": "^4.7.2",
     "ipfs-api": "24.0.1",
+    "js-sha3": "0.8.0",
     "jshint": "^2.9.6",
     "loop-protect": "^2.1.6",
     "p5": "0.7.2",

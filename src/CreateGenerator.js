@@ -98,6 +98,9 @@ function draw() {
           </a>
         </div>
         <div className="editorpage">
+          <div className="tip">
+            Make it live: use $RANDOM_HASH to get a 64 character random hash.
+          </div>
           {!this.state.isProcessing && (
             <AceEditor
               mode="javascript"

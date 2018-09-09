@@ -5,7 +5,12 @@
 
 .editorpage {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.editorpage .tip {
+  padding-bottom: 10px;
+  padding-left: 20px;
 }
 
 .preview, .preview > div {
