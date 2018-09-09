@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import AceEditor from "react-ace";
 import P5Sandbox from "./components/P5Sandbox";
 import ReactModal from "react-modal";
+import CreateGeneratorModalContainer from "./containers/CreateGeneratorModalContainer";
 
 import "brace/mode/javascript";
 import "brace/theme/github";
@@ -57,7 +58,9 @@ function draw() {
       // });
     });
   };
-  handleModalClose = evt => {};
+  closeModal = evt => {
+    this.setState({ isProcessing: false });
+  };
   publishCreation = evt => {
     evt.preventDefault();
   };
@@ -68,18 +71,17 @@ function draw() {
     };
     return (
       <div>
-        <ReactModal
-          isOpen={this.state.isProcessing}
-          onRequestClose={this.handleModalClose}
-        >
-          <h1>Publish your creation!</h1>
-          <button
-            className="button background-color-soul button-large"
-            onClick={this.publishCreation}
+        <div className="modalWrapper">
+          <ReactModal
+            isOpen={this.state.isProcessing}
+            onRequestClose={this.handleModalClose}
           >
-            Publish!
-          </button>
-        </ReactModal>
+            <CreateGeneratorModalContainer
+              fileResult={this.state.fileResult}
+              closeModal={this.closeModal}
+            />
+          </ReactModal>
+        </div>
         <div className="actionBar">
           <h3>Submit a generative work</h3>
           <a
@@ -96,25 +98,26 @@ function draw() {
           </a>
         </div>
         <div className="editorpage">
-          <AceEditor
-            mode="javascript"
-            theme="github"
-            value={this.state.code}
-            width={`${this.props.width / 2 - 1}px`}
-            height={`${this.props.height}px`}
-            onChange={this.onChange}
-            disabled={this.state.isProcessing}
-            name="maindiv"
-            editorProps={{ $blockScrolling: true }}
-          />
-          <div
-            style={{
-              width: `${this.props.width / 2 - 1}px`,
-              height: `${this.props.height}px`
-            }}
-            className="preview"
-          >
-            <P5Sandbox code={this.state.app} />
+          {!this.state.isProcessing && (
+            <AceEditor
+              mode="javascript"
+              theme="github"
+              value={this.state.code}
+              width={`${this.props.width / 2 - 1}px`}
+              height={`${this.props.height}px`}
+              onChange={this.onChange}
+              disabled={this.state.isProcessing}
+              name="maindiv"
+              editorProps={{ $blockScrolling: true }}
+            />
+          )}
+          <div className="preview">
+            <P5Sandbox
+              width={`${this.props.width / 2 - 1}px`}
+              height={`${this.props.height}px`}
+              isPlaying={true}
+              code={this.state.app}
+            />
           </div>
         </div>
       </div>

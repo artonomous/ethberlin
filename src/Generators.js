@@ -90,13 +90,17 @@ class Generators extends React.Component {
         >
           {({ loading, error, data }) => (
             <span>
-              {!loading && (
-                <div className="table">
-                  {data && data.generators && data.generators.map(generator =>
-                    this.generateRow(generator)
-                  )}
-                </div>
-              )}
+              {error && <h1>Error loading generative art :(</h1>}
+              {!loading &&
+                !error && (
+                  <div className="table">
+                    {data &&
+                      data.generators &&
+                      data.generators.map(generator =>
+                        this.generateRow(generator)
+                      )}
+                  </div>
+                )}
             </span>
           )}
         </Query>

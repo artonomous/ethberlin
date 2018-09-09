@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 import ReactDOM from "react-dom";
-import { isEqual } from "lodash";
 import srcDoc from "srcdoc-polyfill";
+import hashToRandomSeed from "../hashToRandomSeed";
 import loopProtect from "loop-protect";
 import { JSHINT } from "jshint";
 import decomment from "decomment";
@@ -12,11 +12,11 @@ export default class P5Sandbox extends React.Component {
     code: PropTypes.string.isRequired
   };
 
-  componentDidMount() {
-    window.addEventListener("message", this.handleConsoleEvent);
-  }
+  static defaultProps = {
+    hash: "0x42u4u2"
+  };
 
-  getHTML() {
+  getHTML = () => {
     return `<!DOCTYPE html>
     <html>
       <head>
@@ -27,11 +27,20 @@ export default class P5Sandbox extends React.Component {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js"></script>
-        <script>${this.props.code}</script>
+        <script>
+          randomSeed(${hashToRandomSeed(this.props.hash)});
+          ${this.props.code}
+        </script>
       </head>
       <body>
       </body>
     </html>`;
+  };
+
+  componentDidMount() {
+    if (this.props.code) {
+      this.renderSketch();
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -47,10 +56,7 @@ export default class P5Sandbox extends React.Component {
       return;
     }
 
-    if (
-      this.props.fullView &&
-      this.props.files[0].id !== prevProps.files[0].id
-    ) {
+    if (this.props.code != prevProps.code) {
       this.renderSketch();
     }
   }
@@ -101,6 +107,8 @@ export default class P5Sandbox extends React.Component {
     return (
       <iframe
         className="preview-frame"
+        width={this.props.width}
+        height={this.props.height}
         aria-label="sketch output"
         role="main"
         frameBorder="0"

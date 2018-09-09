@@ -44,6 +44,7 @@
     "bootstrap-dev": "truffle exec bootstrap/bootstrap.js"
   },
   "devDependencies": {
+    "@babel/standalone": "^7.0.0",
     "openzeppelin-solidity": "1.12.0",
     "prettier": "1.14.2"
   }

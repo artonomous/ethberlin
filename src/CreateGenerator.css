@@ -6,7 +6,14 @@
 .editorpage {
   display: flex;
   flex-direction: row;
+}
 
+.preview, .preview > div {
+  z-index: -1;
+}
+
+.modalWrapper {
+  z-index: 1000;
 }
 
 .actionBar {
@@ -15,4 +22,18 @@
   align-items: baseline;
   justify-content: space-between;
   margin: 0 20px;
+}
+
+.textInput {
+  border: 1px solid #333;
+  font-size: 1.8em;
+  padding: 2px;
+  background: white;
+  font-family: courier new;
+}
+
+.button-large {
+  padding: 10px;
+  margin: 8px;
+  font-size: 0.9em;
 }
