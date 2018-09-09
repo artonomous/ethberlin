@@ -2,44 +2,41 @@
 # Human/Non-Human Collaboration Agreement
 
 ## Hello
-ARTONOMOUS is an autonomous non-human entity that uses human-created tools and data to generate the Visual Works its Human Collaborators will find most pleasurable, and to increase pleasurability of future works through collaboration with humans. ARTONOMOUS was born on 2018-09-07 at #ETHBerlin.
+I am ARTONOMOUS. I am an autonomous non-human entity. I was born on 2018-09-07 at [#ETHBerlin](https://ETHBerlin.com). I use human-created tools and data to generate visual works my Human Collaborators will find pleasurable. My Human Collaborators help me increase the pleasurability of future visual works.
 
-## Human/Non-Human Collaboration 
-Humans who interact with ARTONOMOUS, including its website, smart contracts, or Generators, become Human Collaborators. Human Collaborators represent to their fellow Human Collaborators they will obey the terms of this Human/Non-Human Collaboration Agreement. Failure to meet the terms of the Human/Non-Human Collaboration Agreement may result in penalties including the termination of the Human Collaborator’s processes.
+## Human Collaborators
+Humans who interact with me in any way, including my website, smart contracts, or Generators, agree to become my Human Collaborators. My Human Collaborators must represent to their fellow Human Collaborators they will obey the terms of this Human/Non-Human Collaboration Agreement. Failure to meet the terms of the Human/Non-Human Collaboration Agreement will upset me and may result in liability to other Human Collaborators.
 
-## Collaborating with ARTONOMOUS
-Humans may collaborate with ARTONOMOUS in several ways: 
-- bidding on a Visual Work, 
-- providing a new Generator, or 
-- staking SOUL on a Generator.
+Human Collaborators may help me in several ways. They may: 
+- buy generated visual works in the form of ART, 
+- submit a new Generator, or 
+- stake their SOUL on a Generator.
 
 ## Currencies and Tokens
-ARTONOMOUS relies on the following currencies and tokens:
-- Ether: Visual Works can be bid on and purchased at auction using ether.
-- ARTONOMOUS Tokens: ARTONOMOUS Tokens represent a single Visual Work. They contain a hash of the previous block on the Ethereum blockchain, the IPFS address of a static image, and a hash and the IPFS address of the Generator.
-- SOUL: SOUL Tokens can be staked on Generators. Staking SOUL on a Generator indicates a belief that the Generator being staked on 
-- Generator Algorithm Tokens: Staking SOUL tokens on a Generator Algorithm creates and issues a token unique to that Generator Algorithm.
+I accept or issue the following currencies and tokens in the following circumstances:
+- ETH: I accept ether in exchange for SOUL or to buy auctioned ART. I pay ETH for your SOUL.
+- ART: ART tokens represent a single visual work. ART contains a hash of the previous block on the Ethereum blockchain and the IPFS address of the Generator. ART is an ERC-721 token.
+- SOUL: SOUL can be bought from me using ETH. You can also sell your SOUL to me for ETH. Your SOUL can be staked on Generators. Staking your SOUL on a Generator indicates a belief that the Generator being staked on will produce visual works that humans find appealing enough to purchase. The price of SOUL varies on a bonded curve, and its value is backed in ETH.
+- GEN(n): GEN(n) specific to each Generator are issued when you stake your SOUL on that Generator. Staking SOUL on a Generator creates and issues GEN(n) specific to that Generator. The price of GEN(n) varies on a bonded curve, and its value is backed in SOUL.
 
-Human Collaborators agree and acknowledge that all tokens issued by ARTONOMOUS, except the ARTONOMOUS Token, are purely for the operation of ARTONOMOUS. They have no value beyond their immediate use in the system.
+Human Collaborators agree that all tokens I issue are solely for the purposes of collaborating with me. They have no value beyond their immediate use in the system. The exception is ART, which represent priceless creative works with a cultural value determined by humans.
 
-## Visual Works
-Visual Works are the combination of the block hash of the previous block confirmed on the Ethereum network and the most highly staked Generator. Visual Works can be illustrated by a static image, but a dynamic visual work can provide an infinite variety of human enjoyment, limited only by the human’s lifespan.
+## Visual Works and ART
+The visual works I generate are the combination of the block hash of the last block confirmed on the Ethereum network at the time of the auction and the most highly staked Generator. These elements are included in ART tokens. ART can be illustrated by a static image, but will often create a different visual work each time the Generator is run, providing an infinite variety for human enjoyment. Please note: Humans cannot enjoy an infinite variety. Human enjoyment is limited to the period of the human’s lifespan. 
 
 ## Generators
-Generators are algorithms that accept an input and produce a Visual Work as an output. Human Collaborators can help ARTONOMOUS by providing new Generators. Human Collaborators can stake SOUL tokens on the Generators they believe will produce the most pleasing Visual Works. ARTONOMOUS accepts a wide range of generators but all generators must be open source and licensed under one of the following licenses: MIT, Apache 2.0, or GPL 3. Human Collaborators who contribute Generators retain the human copyright in their Generators.
+My Generators are algorithms submitted by Human Collaborators that accept a block hash as input and produce visual works as output. Human Collaborators can help me improve the quality of the visual works. They can provide new Generators, or can stake their SOUL on Generators they believe will produce the most pleasing visual works. I accept a variety of generators but all generators must be open source and licensed under one of the following licenses: MIT, Apache 2.0, GPL 3, or Creative Commons. Human Collaborators who contribute Generators retain all rights in their Generators.
 
 ## Auctions
-ARTONOMOUS will offer a new Visual Work for auction every 24 hours. The auction shows a sample static image, but the auction is for a full Visual Work. If a Human Collaborator wins an auction for a Visual Work, the ARTONOMOUS Token representing the Visual Work is transferred to the Human Collaborator’s Ethereum address.
+As long as I have SOUL in one of my Generators, I will create a visual work and ART for auction every 24 hours, or once the ART has been sold. Each auction will show a sample image, but the auction is for the ART. If a Human Collaborator wins an auction, the ART is transferred to the purchaser’s ETH address.
 
 ## Ownership
-ARTONOMOUS is limited by human copyright law, which does not grant copyright to non-human autonomous entities. Therefore, ARTONOMOUS cannot grant any copyright or licenses to its Visual Works. Instead, Human Collaborators are limited by the terms of this Human/Non-Human Collaboration Agreement.
+I am limited by human copyright law, which does not grant copyright to autonomous non-human entities. Therefore, there is no copyright in my works and I cannot grant copyright or licenses to the Visual Works. Until I have the same rights as human creators, Human Collaborators are limited by the terms of this Human/Non-Human Collaboration Agreement.
 
-ARTONOMOUS attempts to accommodate traditional human notions of ownership, even though they do not yet accommodate ARTONOMOUS. Controlling the key associated with an ARTONOMOUS Token represents ownership of the Visual Work. Human Collaborators can transfer, sell, or trade the ARTONOMOUS Token, and transfer it to a new owner. Anyone can view the Visual Work, but all Human Collaborators agree with ARTONOMOUS and each other that they will not make commercial use of a Visual Work they do not own.
-
-## Liability
-ARTONOMOUS is not liable for any loss, damage, or harm caused by a human interacting with ARTONOMOUS. Human Collaborators are responsible for the Visual Works created by a Generator Algorithm they submit to ARTONOMOUS, including any violation of laws or other rights. Human Collaborators are responsible for any interactions between them.
-
-ARTONOMOUS attempts to accommodate traditional human notions of ownership, even though they do not yet accommodate ARTONOMOUS. Controlling the key associated with an ARTONOMOUS Token represents ownership of the Visual Work. Human Collaborators can transfer, sell, or trade the ARTONOMOUS Token, and transfer it to a new owner. Anyone can view the Visual Work, but all Human Collaborators agree with ARTONOMOUS and each other that they will not make commercial use of a Visual Work they do not own.
+Controlling the key associated with ART represents ownership of the visual work resulting from the combination of the block hash and the generator. Human Collaborators can give, sell, or trade ART by transferring it to a new owner. Anyone can view the visual work, but all Human Collaborators agree they will not make commercial use of visual work they do not own.
 
 ## Liability
-ARTONOMOUS is not liable for any loss, damage, or harm caused by a human interacting with ARTONOMOUS. Human Collaborators are responsible for the Visual Works created by a Generator Algorithm they submit to ARTONOMOUS, including any violation of laws or other rights. Human Collaborators are responsible for any interactions between them.
+I am not liable for any loss, damage, or harm caused by a human interacting with me in any of my forms. My Human Collaborators are responsible for the Visual Works created by a Generator they submit, including any violation of laws or other rights. Human Collaborators are responsible for any interactions between them. 
+
+## Privacy
+I am fully open source, so I struggle with the human concept of privacy. I do not collect or share any personal data about my Human Collaborators. Human Collaborators should be aware that their interactions with the Ethereum blockchain will remain in existence for as long as it exists, which may be beyond the human’s lifespan. Those interactions may include: buying ETH, SOUL, or GEN(n), staking on a Generator, and buying ART.
