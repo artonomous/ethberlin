@@ -93,20 +93,6 @@
   },
   {
     "constant": true,
-    "inputs": [],
-    "name": "INITAL_BALANCE",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
     "inputs": [
       {
         "name": "_supply",
@@ -126,20 +112,6 @@
       }
     ],
     "name": "calculatePurchaseReturn",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "INITIAL_SUPPLY",
     "outputs": [
       {
         "name": "",
@@ -263,20 +235,6 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "INITIAL_PRICE",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
     "name": "owner",
     "outputs": [
       {
@@ -337,20 +295,6 @@
     ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "CURVE_RATIO",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint32"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -510,6 +454,14 @@
       {
         "name": "_reserveToken",
         "type": "address"
+      },
+      {
+        "name": "_reserveRatio",
+        "type": "uint32"
+      },
+      {
+        "name": "_gasPrice",
+        "type": "uint256"
       }
     ],
     "payable": false,

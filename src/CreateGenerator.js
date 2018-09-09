@@ -20,19 +20,23 @@ class CreateGenerator extends React.Component {
   };
 
   state = {
-    code: `function setup() {
+    code: `const random64 = "$RANDOM_HASH";
+    
+function setup() {
   createCanvas(400, 400);
 }
 
 function draw() {
-  background(220);
+  background(random64.charAt(0)+random64.charAt(1)*5, random64.charAt(2)*2, 30);
 }`,
-    app: `function setup() {
+    app: `const random64 = "$RANDOM_HASH";
+    
+function setup() {
   createCanvas(400, 400);
 }
 
 function draw() {
-  background(220);
+  background(random64.charAt(0)+random64.charAt(1)*5, random64.charAt(2)*2, 30);
 }`,
     isProcessing: false
   };
@@ -98,9 +102,6 @@ function draw() {
           </a>
         </div>
         <div className="editorpage">
-          <div className="tip">
-            Make it live: use $RANDOM_HASH to get a 64 character random hash.
-          </div>
           {!this.state.isProcessing && (
             <AceEditor
               mode="javascript"
