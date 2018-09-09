@@ -9,6 +9,7 @@ import CountdownRenderer from "./CountdownRenderer";
 import LoadingLogo from "./LoadingLogo";
 
 import "./Home.css";
+import EmojiHashRenderer from "./EmojiHashRenderer";
 
 class Home extends Component {
   createAuction() {}
@@ -32,7 +33,9 @@ class Home extends Component {
               <LoadingLogo className="art-piece" />
             </div>
             <div className="art-info">
-              <div className="generator">{generatorAddress}</div>
+              <div className="generator">
+                <EmojiHashRenderer hash={generatorAddress} />
+              </div>
               <div className="timeleft">
                 <Countdown
                   date={new Date(endTime * 1000)}

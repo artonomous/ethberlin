@@ -34,7 +34,7 @@
   padding: 6px 4px;
 }
 
-.currentRank::before, .name::before, .currentStake::before {
+.currentRank::before, .name::before, .currentStake::before, .creator::before {
   font-size: 0.5em;
   display: block;
   border-bottom: 1px dashed black;
@@ -42,6 +42,10 @@
 
 .currentRank::before {
   content: "Current Rank";
+}
+
+.creator::before {
+  content: "Creator";
 }
 
 .name::before {
