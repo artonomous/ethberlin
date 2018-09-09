@@ -20,6 +20,7 @@ class BondingModal extends React.Component {
           isPlaying={true}
           width="100%"
           height="100%"
+          hash={this.props.hash}
           code={this.state.code}
         />
       );

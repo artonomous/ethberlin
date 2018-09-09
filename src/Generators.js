@@ -65,7 +65,7 @@ class Generators extends React.Component {
             onRequestClose={this.handleModalClose(id)}
             style={customStyles}
           >
-            <RenderArtModal url={sourceUri} />
+            <RenderArtModal url={sourceUri} hash={id} />
           </ReactModal>
         </div>
       </div>
