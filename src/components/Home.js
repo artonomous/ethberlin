@@ -7,6 +7,7 @@ import web3 from "web3";
 
 import CountdownRenderer from "./CountdownRenderer";
 import LoadingLogo from "./LoadingLogo";
+import RenderArtModal from "./RenderArtModal";
 
 import "./Home.css";
 import EmojiHashRenderer from "./EmojiHashRenderer";
@@ -15,12 +16,19 @@ class Home extends Component {
   createAuction() {}
 
   render() {
-    const { auction, generator, startAuction, buyPiece } = this.props;
+    const {
+      auction,
+      generator,
+      generatorMetadata,
+      startAuction,
+      buyPiece
+    } = this.props;
     const tokenId = auction.get("value")[0];
     const currentPrice = auction.get("value")[1];
     const endTime = auction.get("value")[2];
-    const generatorAddress = generator && generator.getIn(["0", "value"]);
-
+    const generatorAddress = generator && generator.getIn([tokenId, "value"]);
+    const generatorUri = generatorMetadata.get("value")[2];
+    console.log(generatorUri);
     return (
       <div className="root">
         {tokenId === "0" ? (
@@ -30,7 +38,8 @@ class Home extends Component {
         ) : (
           <div className="art-root">
             <div className="piece-container">
-              <LoadingLogo className="art-piece" />
+              <RenderArtModal url={generatorUri} hash={tokenId} />
+              {/* <LoadingLogo className="art-piece" /> */}
             </div>
             <div className="art-info">
               <div className="generator">
