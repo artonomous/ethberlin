@@ -55,7 +55,7 @@ class DemoSlider extends React.Component {
       hash = this.getAddress();
     }
     this.setState({
-      ticks: this.state.ticks + 1,
+      ticks,
       atSlide,
       hash,
     });

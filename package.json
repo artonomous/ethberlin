@@ -9,7 +9,6 @@
     "ethers": "^4.0.27",
     "graphql": "14.0.2",
     "history": "^4.7.2",
-    "ipfs-api": "24.0.1",
     "ipfs-http-client": "^30.1.4",
     "js-sha3": "0.8.0",
     "jshint": "^2.9.6",
@@ -25,7 +24,7 @@
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
+    "react-scripts": "^3.0.1",
     "react-sizer": "1.0.5",
     "react-spinkit": "^3.0.0",
     "recompose": "^0.30.0",
@@ -51,5 +50,17 @@
     "@babel/standalone": "^7.0.0",
     "openzeppelin-solidity": "1.12.0",
     "prettier": "1.14.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

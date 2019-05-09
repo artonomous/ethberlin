@@ -1,4 +1,4 @@
-import IPFSapi from "ipfs-api";
+import IPFSapi from "ipfs-http-client";
 
 const infuraIPFS = IPFSapi("ipfs.infura.io", 5001, {
   protocol: "https"
@@ -6,7 +6,7 @@ const infuraIPFS = IPFSapi("ipfs.infura.io", 5001, {
 
 export function getTextFileFromPath(cid) {
   return new Promise((resolve, reject) => {
-    infuraIPFS.files.cat(cid, (err, file) => {
+    infuraIPFS.cat(cid, (err, file) => {
       if (err) {
         return reject(err);
       }
@@ -18,19 +18,26 @@ export function getTextFileFromPath(cid) {
 
 export function createFileFromData(data, path = "upload") {
   return new Promise((resolve, reject) => {
-    infuraIPFS.files.add(
+    infuraIPFS.add(
       [
         {
           path: `${path}.p5js`,
           content: typeof data === "string" ? Buffer.from(data) : data
         }
       ],
+      {
+        pin: true,
+      },
       (err, res) => {
         if (err) {
           return reject(err);
         }
         resolve(res);
-        // infuraIPFS.pin.add(res.Hash);
+        try {
+          // infuraIPFS.pin(res.Hash);
+        } catch(e) {
+          console.error(e);
+        }
       }
     );
   });
