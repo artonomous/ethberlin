@@ -1,0 +1,17 @@
+type Generator @entity {
+    id: ID!
+
+    name: String
+    creator: String
+    sourceUri: String
+    token: String
+    __typename: String
+}
+
+type SoulToken @entity {
+    id: ID!
+
+    owner: String!
+    balance: BigInt
+    __typename: String
+}

@@ -30,6 +30,7 @@ export function createFileFromData(data, path = "upload") {
           return reject(err);
         }
         resolve(res);
+        // infuraIPFS.pin.add(res.Hash);
       }
     );
   });

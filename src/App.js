@@ -15,6 +15,7 @@ import AboutContent from "./components/AboutContent";
 import Generators from "./Generators";
 import HomeContainer from "./containers/HomeContainer";
 import HistoricalPieces from "./components/HistoricalPieces";
+import Demo from './Demo';
 
 import withMainLoading from "./utils/withMainLoading";
 
@@ -29,15 +30,17 @@ class App extends Component {
       offline: true
     };
 
-    const value = artonomousInfo.get("value");
+    // const value = artonomousInfo.get("value");
+    let value = [0, 0, 0, 0, 0];
     chainInfo.auctionHouse = value[0];
     chainInfo.generatorRegistry = value[1];
     chainInfo.artPieceToken = value[2];
     chainInfo.soulToken = value[3];
+    chainInfo.auctionHouse = value[4];
     chainInfo.offline = false;
 
     return (
-      <div className="wrapper">
+      <div style={{background:'#222', color:'#eee'}} className="wrapper">
         <HeaderContainer soulToken={chainInfo.soulToken} />
         <Route
           exact
@@ -55,6 +58,7 @@ class App extends Component {
           component={Generators}
           generatorRegistry={chainInfo.generatorRegistry}
         />
+        <Route exact path="/demo" component={Demo} />
         <Route exact path="/generators/create" component={CreateGenerator} />
         <Route exact path="/about" component={AboutContent} />
         <Route exact path="/historical" component={HistoricalPieces} />
@@ -88,6 +92,6 @@ export default compose(
     }
   }),
   withMainLoading(({ accounts, artonomousInfo }) => {
-    return !accounts || !accounts.get("items") || !artonomousInfo.get("value");
+    return !accounts || !accounts.get("items") //|| !artonomousInfo || !artonomousInfo.get("value");
   })
 )(App);

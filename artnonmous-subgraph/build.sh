@@ -1,1 +1,1 @@
-yarn run graph build subgraph.yaml
+graph build subgraph.yaml

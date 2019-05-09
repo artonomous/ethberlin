@@ -23,6 +23,7 @@ class Home extends Component {
       startAuction,
       buyPiece
     } = this.props;
+    debugger
     const tokenId = auction.get("value")[0];
     const currentPrice = auction.get("value")[1];
     const endTime = auction.get("value")[2];

@@ -69,7 +69,11 @@ export default compose(
   ),
   lifecycle({
     componentDidMount() {
-      this.props.getAuction();
+      try {
+        this.props.getAuction();
+      } catch (e) {
+        console.error('err!', e);
+      }
     }
   }),
   withLoading(({ auction }) => {
@@ -77,10 +81,15 @@ export default compose(
   }),
   lifecycle({
     componentDidMount() {
-      this.props.getGenerator(this.props.auction.get("value")[0]);
+      try {
+        this.props.getGenerator(this.props.auction.get("value")[0]);
+      } catch (e) {
+        console.error('err!', e);
+      }
     }
   }),
   withLoading(({ auction, generator }) => {
+    debugger
     const tokenId = auction.get("value")[0];
     return !generator || !generator.getIn([tokenId, "value"]);
   }),

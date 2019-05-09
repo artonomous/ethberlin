@@ -4,12 +4,13 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: GeneratorRegistry
+    network: rinkeby
     source:
       abi: GeneratorRegistry
       address: 53306afc806c5386c1c46d29a1366b784b9b5096
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.1
+      apiVersion: 0.0.2
       language: wasm/assemblyscript
       entities:
         - Generator
@@ -24,12 +25,13 @@ dataSources:
       file: GeneratorRegistry/GeneratorRegistry.wasm
   - kind: ethereum/contract
     name: SoulToken
+    network: rinkeby
     source:
       abi: SoulToken
-      address: 2109413664FF308cb23b5F9903B5bD47F97C93eD
+      address: 2109413664ff308cb23b5f9903b5bd47f97c93ed
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.1
+      apiVersion: 0.0.2
       language: wasm/assemblyscript
       entities:
         - SoulToken

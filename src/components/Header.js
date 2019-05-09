@@ -38,7 +38,7 @@ class Header extends React.Component {
         width: "50%"
       }
     };
-    console.log(soulTokenBalance && typeof soulTokenBalance.get("value"))
+    // console.log(soulTokenBalance && typeof soulTokenBalance.get("value"))
 
     return (
       <div className="header color-text">
@@ -70,7 +70,7 @@ class Header extends React.Component {
         <div className="right">
           <span className="soul">
             {" "}
-            {soulTokenBalance && soulTokenBalance.get("value") && web3.utils.fromWei(soulTokenBalance.get("value"))} 
+            {/* {soulTokenBalance && soulTokenBalance.get("value") && web3.utils.fromWei(soulTokenBalance.get("value"))}  */}
             SOUL
           </span>
           <span
