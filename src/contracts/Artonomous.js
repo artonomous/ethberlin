@@ -1,7 +1,7 @@
 import ReduxSagaWeb3EthContract from "redux-saga-web3-eth-contract";
 import artifact from "../artifacts/Artonomous.json";
 
-ReduxSagaWeb3EthContract.setProvider(window.web3.currentProvider);
+// ReduxSagaWeb3EthContract.setProvider(window.web3.currentProvider);
 
 console.log('address at : ', artifact.networks["4"].address);
 

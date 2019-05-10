@@ -86,12 +86,13 @@ export default compose(
   ),
   lifecycle({
     componentDidMount() {
-      this.props.getAccounts();
-      this.props.getLatestBlock();
-      this.props.getArtonomous();
+      // this.props.getAccounts();
+      // this.props.getLatestBlock();
+      // this.props.getArtonomous();
     }
   }),
   withMainLoading(({ accounts, artonomousInfo }) => {
+    return false
     return !accounts || !accounts.get("items") //|| !artonomousInfo || !artonomousInfo.get("value");
   })
 )(App);

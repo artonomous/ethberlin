@@ -61,8 +61,8 @@ class Header extends React.Component {
               <Link className="color-soul" to="/generators">
                 Generators
               </Link>
-              <Link className="color-soul" to="/historical">
-                History
+              <Link className="color-soul" to="/demo">
+                Demo
               </Link>
             </div>
           </div>
@@ -71,14 +71,14 @@ class Header extends React.Component {
           <span className="soul">
             {" "}
             {/* {soulTokenBalance && soulTokenBalance.get("value") && web3.utils.fromWei(soulTokenBalance.get("value"))}  */}
-            SOUL
+            40 SOUL
           </span>
-          <span
+          {/* <span
             className="button buy-soul background-color-soul"
             onClick={this.handleModalSoulOpen}
           >
             Buy/Sell SOUL
-          </span>
+          </span> */}
           <ReactModal
             isOpen={this.state.showPurchaseModal}
             onRequestClose={this.handleModalSoulClose}

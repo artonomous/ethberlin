@@ -13,10 +13,11 @@ import "./Generators.css";
 ReactModal.defaultStyles.overlay.backgroundColor = "rgba(255,255,255,0.75)";
 
 
-const ticksMax = 60 * 5;
+// const ticksMax = 60 * 5;
+const ticksMax = 5;
 const generators = [
   {name: 'tris', sourceUri: 'QmTpxTNc6sKAc5M3fKWtoJBjvN8tJWWghyKSuArfJKZGNb'},
-  {name: 'snow', sourceUri: 'QmZXx21d5NWRx4mK6CbnLXtxhqSgzTKMj46vFM7oSTrmH3'},
+  // {name: 'snow', sourceUri: 'QmZXx21d5NWRx4mK6CbnLXtxhqSgzTKMj46vFM7oSTrmH3'},
   {name: 'cornered', sourceUri: 'Qmc2ByRxfyfprC29cLn98xewCP85SCaMMhWq96JKds6iZQ'},
 ]
 
@@ -46,13 +47,15 @@ class DemoSlider extends React.Component {
   }
   tick = () => {
     let {atSlide, hash, ticks} = this.state;
-    if (ticks > ticksMax) {
+    if (ticks >= ticksMax) {
       ticks = 0;
-      atSlide++;
+      atSlide += 1;
       if (atSlide === this.state.maxSlides) {
         atSlide = 0;
       }
       hash = this.getAddress();
+    } else {
+      ticks += 1;
     }
     this.setState({
       ticks,
@@ -72,7 +75,7 @@ class DemoSlider extends React.Component {
         justifyContent: 'center',
         color: '#eee',
         alignItems: 'center'}}>
-        <div style={{width: '800px', height: '800px', textAlign: 'center', margin: '0 auto'}}><RenderArtModal url={generator.sourceUri} hash={generator.id} /></div>
+        <div style={{width: '800px', height: '800px', textAlign: 'center', margin: '0 auto'}}><RenderArtModal url={generator.sourceUri} hash={this.state.hash} /></div>
         <br />
         <div style={{textAlign: 'center'}}><span style={{fontSize: '1.4em'}}>{generator.name} // {this.state.hash}</span> // <EmojiHashRenderer hash={this.state.hash || 'testing'} /></div>
         <br />
