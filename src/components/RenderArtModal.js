@@ -14,16 +14,25 @@ export default class RenderArtModal extends React.Component {
     code: null
   };
 
+  componentDidMount() {
+    this.updateData();
+  }
+
+  updateData() {
+    if (this.props.url in codeCache) {
+      this.setState({code: codeCache[this.props.url]});
+      return;
+    }
+    fsapi.getTextFileFromPath(this.props.url.split("/")[0]).then(code => {
+      codeCache[this.props.url] = code;
+      this.setState({ code });
+    });
+  }
+
   componentDidUpdate(prevProps) {
+    console.log('update?');
     if (prevProps.url !== this.props.url) {
-      if (this.props.url in codeCache) {
-        this.setState({code: codeCache[this.props.url]});
-        return;
-      }
-      fsapi.getTextFileFromPath(this.props.url.split("/")[0]).then(code => {
-        codeCache[this.props.url] = code;
-        this.setState({ code });
-      });
+      this.updateData();
     }
   }
   

@@ -13,8 +13,7 @@ import "./Generators.css";
 ReactModal.defaultStyles.overlay.backgroundColor = "rgba(255,255,255,0.75)";
 
 
-// const ticksMax = 60 * 5;
-const ticksMax = 5;
+const ticksMax = 60 * 5;
 const generators = [
   {name: 'tris', sourceUri: 'QmTpxTNc6sKAc5M3fKWtoJBjvN8tJWWghyKSuArfJKZGNb'},
   // {name: 'snow', sourceUri: 'QmZXx21d5NWRx4mK6CbnLXtxhqSgzTKMj46vFM7oSTrmH3'},

@@ -68,9 +68,9 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  artonomousInfo: artonomousSelectors.methods.getInfo()(state),
-  accounts: state.get("accounts"),
-  router: state.get("router")
+  // artonomousInfo: artonomousSelectors.methods.getInfo()(state),
+  // accounts: state.get("accounts"),
+  // router: state.get("router")
 });
 
 const mapDispatchToProps = dispatch => ({
